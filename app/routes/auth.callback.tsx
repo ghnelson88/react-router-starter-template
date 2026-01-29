@@ -1,15 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-import { getSupabaseClient, type SupabaseClient } from "../lib/supabaseClient";
+import { useEffect, useState } from "react";
+import { useSupabaseClient } from "../lib/useSupabaseClient";
 import { WelcomeMessage } from "../components/WelcomeMessage";
 
 type Status =
 	| { state: "loading"; message: string }
 	| { state: "success"; message: string }
 	| { state: "error"; message: string };
-
-function useSupabaseClient(): SupabaseClient | null {
-	return useMemo(() => getSupabaseClient(), []);
-}
 
 function parseAuthParams(url: URL) {
 	const hashParams = new URLSearchParams(url.hash.replace(/^#/, ""));
@@ -24,19 +20,22 @@ function parseAuthParams(url: URL) {
 }
 
 export default function AuthCallbackRoute() {
-	const supabase = useSupabaseClient();
+	const { client: supabase, error: clientError } = useSupabaseClient();
 	const [status, setStatus] = useState<Status>({
 		state: "loading",
 		message: "Completing sign-in...",
 	});
 
 	useEffect(() => {
-		if (!supabase) {
+		if (clientError) {
 			setStatus({
 				state: "error",
-				message:
-					"Supabase client is unavailable. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.",
+				message: clientError,
 			});
+			return;
+		}
+
+		if (!supabase) {
 			return;
 		}
 
@@ -81,7 +80,7 @@ export default function AuthCallbackRoute() {
 		};
 
 		void completeAuth();
-	}, [supabase]);
+	}, [clientError, supabase]);
 
 	if (status.state === "success") {
 		return <WelcomeMessage />;

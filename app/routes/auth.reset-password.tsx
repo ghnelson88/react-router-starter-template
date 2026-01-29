@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { getSupabaseClient, type SupabaseClient } from "../lib/supabaseClient";
+import { useEffect, useState } from "react";
+import { useSupabaseClient } from "../lib/useSupabaseClient";
 import { WelcomeMessage } from "../components/WelcomeMessage";
 
 type Status =
@@ -7,10 +7,6 @@ type Status =
 	| { state: "ready"; message: string }
 	| { state: "success"; message: string }
 	| { state: "error"; message: string };
-
-function useSupabaseClient(): SupabaseClient | null {
-	return useMemo(() => getSupabaseClient(), []);
-}
 
 function parseAuthParams(url: URL) {
 	const hashParams = new URLSearchParams(url.hash.replace(/^#/, ""));
@@ -25,7 +21,8 @@ function parseAuthParams(url: URL) {
 }
 
 export default function ResetPasswordRoute() {
-	const supabase = useSupabaseClient();
+	const { client: supabase, error: clientError, isLoading } =
+		useSupabaseClient();
 	const [status, setStatus] = useState<Status>({
 		state: "loading",
 		message: "Preparing your password reset...",
@@ -34,12 +31,15 @@ export default function ResetPasswordRoute() {
 	const [confirmPassword, setConfirmPassword] = useState("");
 
 	useEffect(() => {
-		if (!supabase) {
+		if (clientError) {
 			setStatus({
 				state: "error",
-				message:
-					"Supabase client is unavailable. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.",
+				message: clientError,
 			});
+			return;
+		}
+
+		if (!supabase) {
 			return;
 		}
 
@@ -90,15 +90,19 @@ export default function ResetPasswordRoute() {
 		};
 
 		void establishSession();
-	}, [supabase]);
+	}, [clientError, supabase]);
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+		if (isLoading) {
+			return;
+		}
 		if (!supabase) {
 			setStatus({
 				state: "error",
 				message:
-					"Supabase client is unavailable. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.",
+					clientError ??
+					"Supabase client is unavailable. Ensure the Supabase script finishes loading.",
 			});
 			return;
 		}
