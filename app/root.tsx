@@ -6,6 +6,7 @@ import {
 	Outlet,
 	Scripts,
 	ScrollRestoration,
+	useLoaderData,
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -24,7 +25,18 @@ export const links: Route.LinksFunction = () => [
 	},
 ];
 
+export function loader({ context }: Route.LoaderArgs) {
+	const env = context.cloudflare?.env;
+
+	return {
+		supabaseUrl: env?.SUPABASE_URL ?? env?.VITE_SUPABASE_URL ?? null,
+		supabaseAnonKey: env?.SUPABASE_ANON_KEY ?? env?.VITE_SUPABASE_ANON_KEY ?? null,
+	};
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+	const { supabaseUrl, supabaseAnonKey } = useLoaderData<typeof loader>();
+
 	return (
 		<html lang="en">
 			<head>
@@ -32,6 +44,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
 				<Links />
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `window.__SUPABASE_ENV__ = ${JSON.stringify({
+							url: supabaseUrl,
+							anonKey: supabaseAnonKey,
+						})};`,
+					}}
+				/>
 				<script
 					defer
 					src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"

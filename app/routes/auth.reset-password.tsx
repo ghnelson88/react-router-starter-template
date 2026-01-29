@@ -38,7 +38,7 @@ export default function ResetPasswordRoute() {
 			setStatus({
 				state: "error",
 				message:
-					"Supabase client is unavailable. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.",
+					"Supabase client is unavailable. Check SUPABASE_URL/SUPABASE_ANON_KEY (or VITE_SUPABASE_URL/VITE_SUPABASE_ANON_KEY).",
 			});
 			return;
 		}
@@ -98,7 +98,7 @@ export default function ResetPasswordRoute() {
 			setStatus({
 				state: "error",
 				message:
-					"Supabase client is unavailable. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.",
+					"Supabase client is unavailable. Check SUPABASE_URL/SUPABASE_ANON_KEY (or VITE_SUPABASE_URL/VITE_SUPABASE_ANON_KEY).",
 			});
 			return;
 		}
