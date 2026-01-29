@@ -29,7 +29,25 @@ declare global {
 				}
 			) => SupabaseClient;
 		};
+		__SUPABASE_ENV__?: {
+			url?: string | null;
+			anonKey?: string | null;
+		};
 	}
+}
+
+function readEnvValue(key: "VITE_SUPABASE_URL" | "VITE_SUPABASE_ANON_KEY") {
+	if (typeof import.meta !== "undefined" && import.meta.env?.[key]) {
+		return import.meta.env[key];
+	}
+
+	if (typeof window !== "undefined") {
+		return key === "VITE_SUPABASE_URL"
+			? window.__SUPABASE_ENV__?.url
+			: window.__SUPABASE_ENV__?.anonKey;
+	}
+
+	return null;
 }
 
 export function getSupabaseClient(): SupabaseClient | null {
@@ -42,8 +60,8 @@ export function getSupabaseClient(): SupabaseClient | null {
 		return null;
 	}
 
-	const url = import.meta.env.VITE_SUPABASE_URL;
-	const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
+	const url = readEnvValue("VITE_SUPABASE_URL");
+	const key = readEnvValue("VITE_SUPABASE_ANON_KEY");
 	if (!url || !key) {
 		return null;
 	}
