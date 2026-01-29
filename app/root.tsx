@@ -26,7 +26,9 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function loader({ context }: Route.LoaderArgs) {
-	const env = context.cloudflare?.env;
+	const env =
+		context.cloudflare?.env ??
+		(typeof process !== "undefined" ? process.env : undefined);
 
 	return {
 		supabaseUrl: env?.SUPABASE_URL ?? env?.VITE_SUPABASE_URL ?? null,
