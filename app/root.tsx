@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
 	isRouteErrorResponse,
 	Links,
@@ -46,6 +47,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+	useEffect(() => {
+		if (typeof window === "undefined") {
+			return;
+		}
+
+		const { hash, pathname, search } = window.location;
+		if (!hash) {
+			return;
+		}
+
+		const hashParams = new URLSearchParams(hash.replace(/^#/, ""));
+		const isRecovery = hashParams.get("type") === "recovery";
+
+		if (!isRecovery || pathname.startsWith("/auth/reset-password")) {
+			return;
+		}
+
+		window.location.replace(`/auth/reset-password${search}${hash}`);
+	}, []);
+
 	return <Outlet />;
 }
 
