@@ -55,7 +55,7 @@ export default function AppDashboard() {
 					<div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6">
 						<div className="flex items-center justify-between">
 							<h2 className="text-lg font-semibold">Team alerts</h2>
-							<button className="text-xs font-semibold uppercase text-slate-500">
+							<button className="text-xs font-semibold uppercase text-slate-500" type="button">
 								Export report
 							</button>
 						</div>
@@ -73,29 +73,35 @@ export default function AppDashboard() {
 						</ul>
 					</div>
 				</div>
-					<aside className="space-y-6">
-						<div className="rounded-3xl border border-slate-200 bg-white p-6">
-							<h2 className="text-lg font-semibold">Priority actions</h2>
-							<ul className="mt-4 space-y-4 text-sm text-slate-600">
-								<li>Publish next week&apos;s training plan.</li>
-								<li>Confirm travel details for the regional meet.</li>
-								<li>Send end-of-month progress summaries.</li>
-							</ul>
-						<button className="mt-6 w-full rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
+				<aside className="space-y-6">
+					<div className="rounded-3xl border border-slate-200 bg-white p-6">
+						<h2 className="text-lg font-semibold">Priority actions</h2>
+						<ul className="mt-4 space-y-4 text-sm text-slate-600">
+							<li>Publish next week&apos;s training plan.</li>
+							<li>Confirm travel details for the regional meet.</li>
+							<li>Send end-of-month progress summaries.</li>
+						</ul>
+						<button
+							className="mt-6 w-full rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white"
+							type="button"
+						>
 							Assign tasks
 						</button>
 					</div>
-						<div className="rounded-3xl border border-slate-200 bg-white p-6">
-							<h2 className="text-lg font-semibold">Support team</h2>
-							<p className="mt-3 text-sm text-slate-500">
-								Your LaneLines partner is on standby.
-							</p>
-							<div className="mt-4 rounded-2xl bg-slate-50 p-4">
-								<p className="text-sm font-semibold">Taylor Brooks</p>
-								<p className="text-xs text-slate-500">Customer Success Coach</p>
-								<button className="mt-4 w-full rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-600">
-									Message success team
-								</button>
+					<div className="rounded-3xl border border-slate-200 bg-white p-6">
+						<h2 className="text-lg font-semibold">Support team</h2>
+						<p className="mt-3 text-sm text-slate-500">
+							Your LaneLines partner is on standby.
+						</p>
+						<div className="mt-4 rounded-2xl bg-slate-50 p-4">
+							<p className="text-sm font-semibold">Taylor Brooks</p>
+							<p className="text-xs text-slate-500">Customer Success Coach</p>
+							<button
+								className="mt-4 w-full rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-600"
+								type="button"
+							>
+								Message success team
+							</button>
 						</div>
 					</div>
 				</aside>

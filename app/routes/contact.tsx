@@ -17,14 +17,14 @@ export default function Contact() {
 			<section className="mx-auto w-full max-w-6xl px-6 py-16">
 				<div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
 					<div>
-					<h1 className="text-4xl font-semibold text-white">Let&apos;s talk swimming</h1>
-					<p className="mt-4 text-lg text-white/70">
-						Tell us about your team size, season goals, and meet schedule. We&apos;ll respond
-						within one business day.
-					</p>
-					<div className="mt-8 space-y-4 text-sm text-white/70">
-						<p>
-							<span className="text-white">Email:</span> hello@lanelinesapp.com
+						<h1 className="text-4xl font-semibold text-white">Let&apos;s talk swimming</h1>
+						<p className="mt-4 text-lg text-white/70">
+							Tell us about your team size, season goals, and meet schedule. We&apos;ll respond
+							within one business day.
+						</p>
+						<div className="mt-8 space-y-4 text-sm text-white/70">
+							<p>
+								<span className="text-white">Email:</span> hello@lanelinesapp.com
 							</p>
 							<p>
 								<span className="text-white">Phone:</span> (555) 555-0148

@@ -48,14 +48,14 @@ export function meta({}: Route.MetaArgs) {
 export default function Pricing() {
 	return (
 		<MarketingLayout>
-				<section className="mx-auto w-full max-w-6xl px-6 py-16">
-					<div className="max-w-2xl">
-						<h1 className="text-4xl font-semibold text-white">Simple, scalable pricing</h1>
-						<p className="mt-4 text-lg text-white/70">
-							Pick a plan that matches your team size and meet schedule. Need a custom rollout?
-							We&apos;ll design it with you.
-						</p>
-					</div>
+			<section className="mx-auto w-full max-w-6xl px-6 py-16">
+				<div className="max-w-2xl">
+					<h1 className="text-4xl font-semibold text-white">Simple, scalable pricing</h1>
+					<p className="mt-4 text-lg text-white/70">
+						Pick a plan that matches your team size and meet schedule. Need a custom rollout?
+						We&apos;ll design it with you.
+					</p>
+				</div>
 				<div className="mt-12 grid gap-6 md:grid-cols-3">
 					{tiers.map((tier) => (
 						<div
