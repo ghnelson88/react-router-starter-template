@@ -1,72 +1,56 @@
-# Welcome to React Router + Cloudflare Workers!
+# LaneLines
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/react-router-starter-template)
+LaneLines is a polished React Router + Cloudflare Workers starter that ships with a production-ready marketing site, an authenticated app shell, and Supabase-ready auth flows. It’s designed to help swim clubs manage attendance, meet logistics, and athlete communications from one workspace.
 
-![React Router Starter Template Preview](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/bfdc2f85-e5c9-4c92-128b-3a6711249800/public)
+## What’s included
 
-<!-- dash-content-start -->
+- Marketing site with hero, pricing, about, and contact pages
+- App dashboard layout for internal operations views
+- Supabase auth callback + password reset routes
+- Tailwind CSS styling with Inter type
+- Cloudflare Workers + Vite integration
 
-A modern, production-ready template for building full-stack React applications using [React Router](https://reactrouter.com/) and the [Cloudflare Vite plugin](https://developers.cloudflare.com/workers/vite-plugin/).
+## Getting started
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-- 🔎 Built-in Observability to monitor your Worker
-<!-- dash-content-end -->
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
-
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/react-router-starter-template
-```
-
-A live public deployment of this template is available at [https://react-router-starter-template.templates.workers.dev](https://react-router-starter-template.templates.workers.dev)
-
-### Installation
-
-Install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+Run the dev server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The app runs at `http://localhost:5173`.
 
-## Typegen
+## Environment configuration
 
-Generate types for your Cloudflare bindings in `wrangler.json`:
+Supabase is loaded via the global script tag in `app/root.tsx` and expects the following environment variables:
 
-```sh
-npm run typegen
+```bash
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
 ```
 
-## Building for Production
+You can also use the Vite-prefixed equivalents in local development:
 
-Create a production build:
+```bash
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
+```
+
+## Production build
+
+Build the app:
 
 ```bash
 npm run build
 ```
 
-## Previewing the Production Build
-
-Preview the production build locally:
+Preview the build locally:
 
 ```bash
 npm run preview
@@ -74,36 +58,9 @@ npm run preview
 
 ## Deployment
 
-If you don't have a Cloudflare account, [create one here](https://dash.cloudflare.com/sign-up)! Go to your [Workers dashboard](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages) to see your [free custom Cloudflare Workers subdomain](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/) on `*.workers.dev`.
+Deploy to Cloudflare Workers:
 
-Once that's done, you can build your app:
-
-```sh
-npm run build
-```
-
-And deploy it:
-
-```sh
+```bash
 npm run deploy
 ```
 
-To deploy a preview URL:
-
-```sh
-npx wrangler versions upload
-```
-
-You can then promote a version to production after verification or roll it out progressively.
-
-```sh
-npx wrangler versions deploy
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.

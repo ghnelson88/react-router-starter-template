@@ -126,7 +126,7 @@ export default function ResetPasswordRoute() {
 			return;
 		}
 
-		setStatus({ state: "success", message: "welcome to lanelines" });
+		setStatus({ state: "success", message: "Welcome to LaneLines." });
 	};
 
 	if (status.state === "success") {

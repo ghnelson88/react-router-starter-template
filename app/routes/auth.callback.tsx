@@ -56,7 +56,7 @@ export default function AuthCallbackRoute() {
 					setStatus({ state: "error", message: exchangeError.message });
 					return;
 				}
-				setStatus({ state: "success", message: "welcome to lanelines" });
+				setStatus({ state: "success", message: "Welcome to LaneLines." });
 				return;
 			}
 
@@ -69,7 +69,7 @@ export default function AuthCallbackRoute() {
 					setStatus({ state: "error", message: sessionError.message });
 					return;
 				}
-				setStatus({ state: "success", message: "welcome to lanelines" });
+				setStatus({ state: "success", message: "Welcome to LaneLines." });
 				return;
 			}
 
