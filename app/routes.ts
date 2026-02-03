@@ -5,6 +5,7 @@ export default [
 	route("pricing", "routes/pricing.tsx"),
 	route("about", "routes/about.tsx"),
 	route("contact", "routes/contact.tsx"),
+	route("privacy", "routes/privacy.tsx"),
 	route("app", "routes/app._index.tsx"),
 	route("auth/reset-password", "routes/auth.reset-password.tsx"),
 	route("auth/callback", "routes/auth.callback.tsx"),
