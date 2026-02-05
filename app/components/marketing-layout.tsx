@@ -29,12 +29,12 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 						))}
 					</nav>
 					<div className="flex items-center gap-3 text-sm">
-						<Link
+						<a
 							className="rounded-full border border-white/20 px-4 py-2 text-white/80 transition hover:border-white/40 hover:text-white"
-							to="/app"
+							href="https://app.lanelinesapp.com"
 						>
 							Open App
-						</Link>
+						</a>
 						<Link
 							className="rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-amber-300 px-4 py-2 font-medium text-slate-900 transition hover:opacity-90"
 							to="/contact"
