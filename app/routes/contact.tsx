@@ -26,19 +26,19 @@ export default function Contact() {
 							<p>
 								<span className="text-white">Email:</span> hello@lanelinesapp.com
 							</p>
-							<p>
-								<span className="text-white">Phone:</span> (555) 555-0148
-							</p>
-							<p>
-								<span className="text-white">HQ:</span> Remote-first · North America
-							</p>
 						</div>
 					</div>
-					<form className="rounded-3xl border border-white/10 bg-white/5 p-8 text-sm text-white/80">
+					<form
+						action="mailto:support@lanelinesapp.com"
+						className="rounded-3xl border border-white/10 bg-white/5 p-8 text-sm text-white/80"
+						encType="text/plain"
+						method="post"
+					>
 						<label className="block">
 							<span className="text-white">Name</span>
 							<input
 								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								name="name"
 								placeholder="Jane Doe"
 								type="text"
 							/>
@@ -47,13 +47,17 @@ export default function Contact() {
 							<span className="text-white">Work email</span>
 							<input
 								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								name="workEmail"
 								placeholder="jane@company.com"
 								type="email"
 							/>
 						</label>
 						<label className="mt-5 block">
 							<span className="text-white">Team profile</span>
-							<select className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white">
+							<select
+								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white"
+								name="teamProfile"
+							>
 								<option className="text-slate-900">Small team</option>
 								<option className="text-slate-900">Growing program</option>
 								<option className="text-slate-900">Multi-squad club</option>
@@ -63,10 +67,14 @@ export default function Contact() {
 							<span className="text-white">What are you hoping to solve?</span>
 							<textarea
 								className="mt-2 min-h-[120px] w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								name="goals"
 								placeholder="Tell us about attendance, meet management, or parent communication..."
 							/>
 						</label>
-						<button className="mt-6 w-full rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900">
+						<button
+							className="mt-6 w-full rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900"
+							type="submit"
+						>
 							Submit request
 						</button>
 						<p className="mt-3 text-xs text-white/60">
