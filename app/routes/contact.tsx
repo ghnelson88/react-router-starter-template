@@ -170,7 +170,7 @@ export default function Contact() {
 							</p>
 						)}
 						<p className="mt-3 text-xs text-white/60">
-							By submitting, you agree to receive communications from Lanelines.
+							By submitting, you agree to receive communications from LaneLines.
 						</p>
 					</Form>
 				</div>
