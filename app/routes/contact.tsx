@@ -36,7 +36,7 @@ export async function action({ context, request }: Route.ActionArgs) {
 		(typeof process !== "undefined" ? process.env : undefined);
 	const resendApiKey = env?.RESEND_API_KEY;
 	const toAddress = env?.DEMO_REQUEST_TO_EMAIL ?? "support@lanelinesapp.com";
-	const fromAddress = env?.DEMO_REQUEST_FROM_EMAIL ?? "LaneLines Demo <onboarding@resend.dev>";
+	const fromAddress = env?.DEMO_REQUEST_FROM_EMAIL ?? "LaneLines Demo <demo@lanelinesapp.com>";
 
 	if (!resendApiKey) {
 		return Response.json<ActionData>(
