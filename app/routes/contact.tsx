@@ -19,8 +19,8 @@ export default function Contact() {
 					<div>
 						<h1 className="text-4xl font-semibold text-white">Let&apos;s talk swimming</h1>
 						<p className="mt-4 text-lg text-white/70">
-							Tell us about your team size, season goals, and meet schedule. We&apos;ll respond
-							within one business day.
+							Tell us about your team goals, season rhythm, and meet schedule. We&apos;ll respond
+							soon.
 						</p>
 						<div className="mt-8 space-y-4 text-sm text-white/70">
 							<p>
@@ -52,11 +52,11 @@ export default function Contact() {
 							/>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-white">Team size</span>
+							<span className="text-white">Team profile</span>
 							<select className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white">
-								<option className="text-slate-900">Under 50 athletes</option>
-								<option className="text-slate-900">50 - 150 athletes</option>
-								<option className="text-slate-900">150+ athletes</option>
+								<option className="text-slate-900">Small team</option>
+								<option className="text-slate-900">Growing program</option>
+								<option className="text-slate-900">Multi-squad club</option>
 							</select>
 						</label>
 						<label className="mt-5 block">

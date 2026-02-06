@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"LaneLines centralizes swim team scheduling, athlete progress, and meet operations for coaches, families, and clubs.",
+				"LaneLines unifies swim team communication, scheduling, and meet prep for coaches, families, and clubs.",
 		},
 	];
 }
@@ -19,14 +19,14 @@ export default function Home() {
 				<div className="grid gap-10 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
 					<div>
 						<p className="text-sm uppercase tracking-[0.3em] text-white/60">
-							Built for swim clubs
+							Swim ops, reimagined
 						</p>
 						<h1 className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl">
-							Every athlete, workout, and meet in one place.
+							Keep every practice, meet, and family on the same page.
 						</h1>
 						<p className="mt-4 text-lg text-white/70">
-							LaneLines gives coaches and team admins a single source of truth for training
-							plans, attendance, and meet results so everyone stays aligned.
+							LaneLines brings coaching, communication, and meet logistics into one clear hub
+							so your team can move faster and stay aligned all season.
 						</p>
 						<div className="mt-8 flex flex-wrap gap-4">
 							<a
@@ -44,16 +44,16 @@ export default function Home() {
 						</div>
 						<div className="mt-10 grid gap-6 text-sm text-white/70 sm:grid-cols-3">
 							<div>
-								<p className="text-2xl font-semibold text-white">32%</p>
-								<p className="mt-1">Higher athlete attendance</p>
+								<p className="text-2xl font-semibold text-white">Attendance clarity</p>
+								<p className="mt-1">Spot trends and act early when attendance slips.</p>
 							</div>
 							<div>
-								<p className="text-2xl font-semibold text-white">4 hrs</p>
-								<p className="mt-1">Saved weekly on admin tasks</p>
+								<p className="text-2xl font-semibold text-white">Operational lift</p>
+								<p className="mt-1">Reduce back-and-forth across email and spreadsheets.</p>
 							</div>
 							<div>
-								<p className="text-2xl font-semibold text-white">98%</p>
-								<p className="mt-1">Families staying informed</p>
+								<p className="text-2xl font-semibold text-white">Family confidence</p>
+								<p className="mt-1">Keep guardians in sync with schedules and updates.</p>
 							</div>
 						</div>
 					</div>
@@ -61,22 +61,26 @@ export default function Home() {
 						<h2 className="text-lg font-semibold text-white">Coach dashboard preview</h2>
 						<ul className="mt-6 space-y-4 text-sm text-white/70">
 							<li>
-								<span className="font-medium text-white">Attendance insights</span> by practice,
+								<span className="font-medium text-white">Attendance signals</span> by practice,
 								athlete, and group.
 							</li>
 							<li>
-								<span className="font-medium text-white">Training plans</span> that auto-publish
-								to athletes and parents.
+								<span className="font-medium text-white">Training plans</span> that publish to
+								athletes and parents.
 							</li>
 							<li>
-								<span className="font-medium text-white">Meet management</span> with heat sheets,
-								seed times, and RSVPs.
+								<span className="font-medium text-white">Meet readiness</span> with entries,
+								roles, and RSVPs.
 							</li>
 						</ul>
 						<div className="mt-8 rounded-2xl bg-slate-950/60 p-6">
-							<p className="text-xs uppercase tracking-[0.3em] text-white/50">Today</p>
-							<p className="mt-3 text-2xl font-semibold text-white">146 athletes checked in</p>
-							<p className="mt-2 text-sm text-white/60">3 workouts published · 2 meets in prep</p>
+							<p className="text-xs uppercase tracking-[0.3em] text-white/50">Snapshot</p>
+							<p className="mt-3 text-2xl font-semibold text-white">
+								Check-ins and workouts in sync
+							</p>
+							<p className="mt-2 text-sm text-white/60">
+								Meet prep, volunteer roles, and updates ready to share.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -88,19 +92,19 @@ export default function Home() {
 						<div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 							<h3 className="text-lg font-semibold text-white">Unified roster hub</h3>
 							<p className="mt-3 text-sm text-white/70">
-								Track attendance, athlete groups, and practice history in a single view.
+								Track attendance, athlete groups, and practice history in one clean view.
 							</p>
 						</div>
 						<div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 							<h3 className="text-lg font-semibold text-white">Smarter communication</h3>
 							<p className="mt-3 text-sm text-white/70">
-								Automated updates keep families aligned on practices and meet changes.
+								Share updates once and keep everyone aligned across practices and meets.
 							</p>
 						</div>
 						<div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-							<h3 className="text-lg font-semibold text-white">Meet ready workflows</h3>
+							<h3 className="text-lg font-semibold text-white">Meet-ready workflows</h3>
 							<p className="mt-3 text-sm text-white/70">
-								Collect entries, seed times, and travel details without spreadsheets.
+								Coordinate entries, volunteer roles, and logistics without spreadsheets.
 							</p>
 						</div>
 					</div>
@@ -114,7 +118,7 @@ export default function Home() {
 								Bring your entire swim program into LaneLines.
 							</h2>
 							<p className="mt-2 text-sm text-white/70">
-								Set up your club, invite athletes, and streamline every meet.
+								Set up your club, invite families, and streamline every meet.
 							</p>
 						</div>
 						<a
