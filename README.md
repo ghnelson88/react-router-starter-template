@@ -42,6 +42,20 @@ VITE_SUPABASE_URL=...
 VITE_SUPABASE_ANON_KEY=...
 ```
 
+The contact/demo request form sends email through Resend using server-side variables:
+
+```bash
+RESEND_API_KEY=...
+DEMO_REQUEST_TO_EMAIL=support@lanelinesapp.com # optional override
+DEMO_REQUEST_FROM_EMAIL="LaneLines Demo <onboarding@resend.dev>" # optional override
+```
+
+For Cloudflare Workers, set the API key as a secret:
+
+```bash
+wrangler secret put RESEND_API_KEY
+```
+
 ## Production build
 
 Build the app:
