@@ -3,34 +3,34 @@ import { MarketingLayout } from "../components/marketing-layout";
 
 const tiers = [
 	{
-		name: "Starter",
-		price: "$699",
-		description: "Launch LaneLines for a single team and core practice scheduling.",
+		name: "Pilot",
+		price: "Launch pricing",
+		description: "A guided rollout for a single team and core scheduling needs.",
 		features: [
-			"One team roster",
+			"Team roster setup",
 			"Practice scheduling",
-			"Parent notifications",
+			"Family communications",
 		],
 	},
 	{
-		name: "Growth",
-		price: "$1,950",
-		description: "Scale across multiple squads with meet prep and analytics.",
+		name: "Club",
+		price: "Team pricing",
+		description: "Scale across squads with meet prep, volunteers, and insights.",
 		features: [
 			"Multi-group planning",
-			"Meet entry management",
+			"Meet and volunteer coordination",
 			"Attendance insights",
 		],
 		highlighted: true,
 	},
 	{
-		name: "Enterprise",
+		name: "Federation",
 		price: "Custom",
 		description: "Custom workflows for large clubs, associations, and federations.",
 		features: [
-			"Unlimited teams",
-			"Custom integrations",
-			"Dedicated success manager",
+			"Multi-club governance",
+			"Custom workflows",
+			"Dedicated success partner",
 		],
 	},
 ];
@@ -50,10 +50,10 @@ export default function Pricing() {
 		<MarketingLayout>
 			<section className="mx-auto w-full max-w-6xl px-6 py-16">
 				<div className="max-w-2xl">
-					<h1 className="text-4xl font-semibold text-white">Simple, scalable pricing</h1>
+					<h1 className="text-4xl font-semibold text-white">Flexible pricing for growing teams</h1>
 					<p className="mt-4 text-lg text-white/70">
-						Pick a plan that matches your team size and meet schedule. Need a custom rollout?
-						We&apos;ll design it with you.
+						Pick a plan that matches your season goals and operational needs. Need a custom
+						rollout? We&apos;ll design it with you.
 					</p>
 				</div>
 				<div className="mt-12 grid gap-6 md:grid-cols-3">

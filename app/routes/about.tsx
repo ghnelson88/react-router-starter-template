@@ -4,7 +4,7 @@ import { MarketingLayout } from "../components/marketing-layout";
 const values = [
 	{
 		title: "Operational empathy",
-		copy: "We build with coaches, parents, and swimmers who live in the season every day.",
+		copy: "We build with coaches, parents, and swimmers who live the season every day.",
 	},
 	{
 		title: "Data you can trust",
@@ -12,7 +12,7 @@ const values = [
 	},
 	{
 		title: "Partnership over platforms",
-		copy: "LaneLines works alongside your team to deliver better swimmer outcomes, not just dashboards.",
+		copy: "LaneLines works alongside your team to elevate swimmer outcomes, not just dashboards.",
 	},
 ];
 
@@ -34,24 +34,24 @@ export default function About() {
 					<div>
 						<p className="text-sm uppercase tracking-[0.3em] text-white/60">Our mission</p>
 						<h1 className="mt-4 text-4xl font-semibold text-white">
-							Help every swim team operate like a championship program.
+							Help every swim team operate with championship-level clarity.
 						</h1>
 						<p className="mt-4 text-lg text-white/70">
 							We started LaneLines after watching coaches juggle attendance sheets, meet entries,
-							and endless email threads. Our platform turns swim operations into a clear, shared
-							source of truth.
+							and endless email threads. Our platform brings swim operations into a single
+							shared workspace so teams can focus on athlete growth.
 						</p>
 					</div>
 					<div className="rounded-3xl border border-white/10 bg-white/5 p-8">
 						<h2 className="text-lg font-semibold text-white">Built for teams like yours</h2>
 						<p className="mt-4 text-sm text-white/70">
-							From summer league programs to year-round clubs, LaneLines adapts to the cadence
+							From summer league programs to year-round clubs, LaneLines adapts to the rhythm
 							and complexity of your season.
 						</p>
 						<div className="mt-6 space-y-3 text-sm text-white/70">
-							<p>Decades of combined coaching and club operations expertise</p>
+							<p>Built alongside coaches and operations leaders</p>
 							<p>Season planning across practices, meets, and clinics</p>
-							<p>Analytics designed for swimmer development</p>
+							<p>Insights designed for swimmer development</p>
 						</div>
 					</div>
 				</div>

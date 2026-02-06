@@ -5,12 +5,12 @@ const alerts = [
 	{
 		lane: "Senior group • Morning practice",
 		status: "Attendance dip",
-		detail: "3 athletes absent · follow-up sent to parents",
+		detail: "Absences flagged · follow-up queued for families",
 	},
 	{
 		lane: "Meet: Regional Qualifier",
 		status: "Entries due",
-		detail: "Submission deadline in 2 days · 14 athletes pending",
+		detail: "Submission deadline approaching · entries still pending",
 	},
 	{
 		lane: "Age group • Afternoon practice",
@@ -38,18 +38,18 @@ export default function AppDashboard() {
 					<div className="mt-8 grid gap-4 sm:grid-cols-3">
 						<div className="rounded-2xl border border-slate-200 bg-white p-5">
 							<p className="text-xs font-semibold uppercase text-slate-400">Athletes</p>
-							<p className="mt-3 text-2xl font-semibold">214</p>
-							<p className="mt-2 text-xs text-emerald-600">+4 new this month</p>
+							<p className="mt-3 text-2xl font-semibold">Active roster</p>
+							<p className="mt-2 text-xs text-emerald-600">New registrations highlighted</p>
 						</div>
 						<div className="rounded-2xl border border-slate-200 bg-white p-5">
 							<p className="text-xs font-semibold uppercase text-slate-400">Attendance</p>
-							<p className="mt-3 text-2xl font-semibold">92%</p>
-							<p className="mt-2 text-xs text-emerald-600">+3% vs last week</p>
+							<p className="mt-3 text-2xl font-semibold">On-track trends</p>
+							<p className="mt-2 text-xs text-emerald-600">Patterns surfaced for coaches</p>
 						</div>
 						<div className="rounded-2xl border border-slate-200 bg-white p-5">
 							<p className="text-xs font-semibold uppercase text-slate-400">Meets</p>
-							<p className="mt-3 text-2xl font-semibold">3 upcoming</p>
-							<p className="mt-2 text-xs text-amber-600">Entries due</p>
+							<p className="mt-3 text-2xl font-semibold">Upcoming meets</p>
+							<p className="mt-2 text-xs text-amber-600">Entries and roles in progress</p>
 						</div>
 					</div>
 					<div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6">
