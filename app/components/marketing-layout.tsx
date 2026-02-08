@@ -4,6 +4,7 @@ const navLinks = [
 	{ label: "Pricing", to: "/pricing" },
 	{ label: "About", to: "/about" },
 	{ label: "Contact", to: "/contact" },
+	{ label: "Guidelines", to: "/community-guidelines" },
 ];
 
 export function MarketingLayout({ children }: { children: React.ReactNode }) {
@@ -65,6 +66,9 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 						</Link>
 						<Link className="hover:text-white" to="/privacy">
 							Privacy
+						</Link>
+						<Link className="hover:text-white" to="/community-guidelines">
+							Community Guidelines
 						</Link>
 						<Link className="hover:text-white" to="/support">
 							Support

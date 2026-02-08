@@ -110,6 +110,27 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<section className="border-t border-white/10 bg-slate-900/60">
+				<div className="mx-auto w-full max-w-6xl px-6 py-12">
+					<div className="rounded-2xl border border-white/10 bg-white/5 p-6 md:flex md:items-center md:justify-between md:gap-6">
+						<div>
+							<h2 className="text-xl font-semibold text-white">Built for safe, respectful team communication</h2>
+							<p className="mt-2 text-sm text-white/70">
+								Read our Community Guidelines to understand expectations for coaches, guardians, and swimmers.
+							</p>
+						</div>
+						<div className="mt-4 md:mt-0">
+							<a
+								className="inline-flex rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-white/85 transition hover:border-white/40 hover:text-white"
+								href="/community-guidelines"
+							>
+								View Community Guidelines
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section className="mx-auto w-full max-w-6xl px-6 py-16">
 				<div className="rounded-3xl border border-white/10 bg-gradient-to-br from-sky-400/20 via-blue-500/10 to-amber-300/10 p-10">
 					<div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
