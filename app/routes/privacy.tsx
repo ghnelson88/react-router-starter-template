@@ -200,7 +200,7 @@ export default function Privacy() {
 						<h3 className="mt-6 text-lg font-semibold text-white">Key Protections:</h3>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>
-								Child data is collected <strong>only with parental or guardian involvement</strong>
+								Child data is collected <strong>only with verifiable parental or guardian consent or through a team's external registration system</strong>
 							</li>
 							<li>Guardians control swimmer participation and data visibility</li>
 							<li>
@@ -209,7 +209,8 @@ export default function Privacy() {
 							<li>We do not display advertising or collect data for marketing purposes</li>
 						</ul>
 						<p className="mt-3">
-							We comply with the Children's Online Privacy Protection Act (COPPA). Parents or
+							We are committed to complying with the Children's Online Privacy Protection Act
+							(COPPA). Parents or
 							guardians may review, request deletion of, or restrict further collection of their
 							child's information.
 						</p>
