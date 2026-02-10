@@ -9,26 +9,26 @@ const navLinks = [
 
 export function MarketingLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="min-h-screen bg-slate-950 text-white">
+		<div className="min-h-screen bg-[#F5F5F5] text-[#0D3C61]">
 			<a
-				className="sr-only left-4 top-4 z-50 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-slate-900 focus:not-sr-only focus:fixed"
+				className="sr-only left-4 top-4 z-50 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#0D3C61] focus:not-sr-only focus:fixed"
 				href="#main-content"
 			>
 				Skip to content
 			</a>
-			<header className="border-b border-white/10 bg-slate-950/80 backdrop-blur">
+			<header className="border-b border-[#0D3C61]/15 bg-white/95 backdrop-blur">
 				<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-4 md:gap-6 md:py-5">
-					<Link className="flex items-center gap-3 text-lg font-semibold tracking-wide" to="/">
-						<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 via-blue-500 to-amber-300 text-sm font-bold text-slate-900">
+					<Link className="flex items-center gap-3 text-lg font-semibold tracking-wide text-[#0D3C61]" to="/">
+						<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#1E88E5] text-sm font-bold text-white">
 							LL
 						</span>
 						LaneLines
 					</Link>
-					<nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+					<nav className="hidden items-center gap-6 text-sm text-[#0D3C61]/80 md:flex">
 						{navLinks.map((link) => (
 							<Link
 								key={link.to}
-								className="transition hover:text-white"
+								className="transition hover:text-[#1E88E5]"
 								to={link.to}
 							>
 								{link.label}
@@ -37,34 +37,34 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 					</nav>
 					<div className="hidden items-center gap-3 text-sm md:flex">
 						<a
-							className="rounded-full border border-white/20 px-4 py-2.5 text-white/90 transition hover:border-white/40 hover:text-white"
+							className="rounded-full border border-[#0D3C61]/30 px-4 py-2.5 text-[#0D3C61] transition hover:border-[#0D3C61]/55"
 							href="https://app.lanelinesapp.com"
 						>
 							Open App
 						</a>
 						<Link
-							className="rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-amber-300 px-4 py-2.5 font-semibold text-slate-900 transition hover:opacity-90"
+							className="rounded-full bg-[#1E88E5] px-4 py-2.5 font-semibold text-white transition hover:bg-[#1565C0]"
 							to="/contact"
 						>
 							Contact Sales
 						</Link>
 					</div>
 					<details className="relative md:hidden">
-						<summary className="list-none rounded-xl border border-white/20 px-3 py-2 text-sm text-white/90">
+						<summary className="list-none rounded-xl border border-[#0D3C61]/25 px-3 py-2 text-sm text-[#0D3C61]">
 							Menu
 						</summary>
-						<div className="absolute right-0 top-12 w-52 space-y-2 rounded-2xl border border-white/10 bg-slate-900 p-3 shadow-xl">
+						<div className="absolute right-0 top-12 w-52 space-y-2 rounded-2xl border border-[#0D3C61]/15 bg-white p-3 shadow-xl">
 							{navLinks.map((link) => (
 								<Link
 									key={link.to}
-									className="block rounded-lg px-3 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
+									className="block rounded-lg px-3 py-2 text-sm text-[#0D3C61] hover:bg-[#1E88E5]/10"
 									to={link.to}
 								>
 									{link.label}
 								</Link>
 							))}
 							<Link
-								className="mt-1 block rounded-lg bg-white px-3 py-2 text-sm font-semibold text-slate-900"
+								className="mt-1 block rounded-lg bg-[#1E88E5] px-3 py-2 text-sm font-semibold text-white"
 								to="/contact"
 							>
 								Contact Sales
@@ -74,31 +74,31 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 				</div>
 			</header>
 			<main id="main-content">{children}</main>
-			<footer className="border-t border-white/10">
-				<div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+			<footer className="border-t border-[#0D3C61]/15 bg-white">
+				<div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-[#0D3C61]/75 md:flex-row md:items-center md:justify-between">
 					<div>
-						<p className="text-white">LaneLines</p>
+						<p className="text-[#0D3C61]">LaneLines</p>
 						<p className="mt-2 max-w-md">
 							The swim team platform that keeps athletes, coaches, and families in sync.
 						</p>
 					</div>
 					<div className="flex flex-wrap gap-4">
-						<Link className="hover:text-white" to="/pricing">
+						<Link className="hover:text-[#1E88E5]" to="/pricing">
 							Pricing
 						</Link>
-						<Link className="hover:text-white" to="/about">
+						<Link className="hover:text-[#1E88E5]" to="/about">
 							About
 						</Link>
-						<Link className="hover:text-white" to="/contact">
+						<Link className="hover:text-[#1E88E5]" to="/contact">
 							Contact
 						</Link>
-						<Link className="hover:text-white" to="/privacy">
+						<Link className="hover:text-[#1E88E5]" to="/privacy">
 							Privacy
 						</Link>
-						<Link className="hover:text-white" to="/community-guidelines">
+						<Link className="hover:text-[#1E88E5]" to="/community-guidelines">
 							Community Guidelines
 						</Link>
-						<Link className="hover:text-white" to="/support">
+						<Link className="hover:text-[#1E88E5]" to="/support">
 							Support
 						</Link>
 					</div>

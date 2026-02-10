@@ -93,34 +93,34 @@ export default function Contact() {
 			<section className="mx-auto w-full max-w-6xl px-6 py-12 md:py-16">
 				<div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
 					<div>
-						<h1 className="text-4xl font-semibold text-white md:text-5xl">Contact us</h1>
-						<p className="mt-4 text-lg text-white/80">
+						<h1 className="text-4xl font-semibold text-[#0D3C61] md:text-5xl">Contact us</h1>
+						<p className="mt-4 text-lg text-[#0D3C61]/85">
 							Tell us about your team goals, season rhythm, and meet schedule. We&apos;ll follow
 							up within one business day.
 						</p>
 						<div className="mt-8 grid gap-3 sm:grid-cols-2">
 							<a
-								className="rounded-2xl border border-white/20 bg-white/5 px-5 py-4 text-base font-medium text-white hover:border-white/40"
+								className="rounded-2xl border border-[#0D3C61]/20 bg-white px-5 py-4 text-base font-medium text-[#0D3C61] hover:border-[#1E88E5]/50"
 								href="mailto:hello@lanelinesapp.com"
 							>
 								Email us directly
-								<p className="mt-1 text-sm font-normal text-white/70">hello@lanelinesapp.com</p>
+								<p className="mt-1 text-sm font-normal text-[#0D3C61]/70">hello@lanelinesapp.com</p>
 							</a>
 							<a
-								className="rounded-2xl border border-white/20 bg-white/5 px-5 py-4 text-base font-medium text-white hover:border-white/40"
+								className="rounded-2xl border border-[#0D3C61]/20 bg-white px-5 py-4 text-base font-medium text-[#0D3C61] hover:border-[#1E88E5]/50"
 								href="/pricing"
 							>
 								See plans first
-								<p className="mt-1 text-sm font-normal text-white/70">Compare options in under a minute</p>
+								<p className="mt-1 text-sm font-normal text-[#0D3C61]/70">Compare options in under a minute</p>
 							</a>
 						</div>
 					</div>
-					<Form className="rounded-3xl border border-white/15 bg-white/5 p-8 text-sm text-white/80" method="post">
-						<p className="mb-5 text-sm text-white/70">Complete this short form and we&apos;ll reach out quickly.</p>
+					<Form className="rounded-3xl border border-[#0D3C61]/15 bg-white p-8 text-sm text-[#0D3C61]/85 shadow-sm" method="post">
+						<p className="mb-5 text-sm text-[#0D3C61]/70">Complete this short form and we&apos;ll reach out quickly.</p>
 						<label className="block">
-							<span className="text-white">Name</span>
+							<span className="text-[#0D3C61]">Name</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
+								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
 								name="name"
 								placeholder="Jane Doe"
 								required
@@ -128,9 +128,9 @@ export default function Contact() {
 							/>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-white">Work email</span>
+							<span className="text-[#0D3C61]">Work email</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
+								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
 								name="workEmail"
 								placeholder="jane@company.com"
 								required
@@ -138,34 +138,34 @@ export default function Contact() {
 							/>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-white">Team profile</span>
+							<span className="text-[#0D3C61]">Team profile</span>
 							<select
-								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white"
+								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61]"
 								name="teamProfile"
 								required
 							>
-								<option className="text-slate-900" value="Small team">
+								<option className="text-[#0D3C61]" value="Small team">
 									Small team
 								</option>
-								<option className="text-slate-900" value="Growing program">
+								<option className="text-[#0D3C61]" value="Growing program">
 									Growing program
 								</option>
-								<option className="text-slate-900" value="Multi-squad club">
+								<option className="text-[#0D3C61]" value="Multi-squad club">
 									Multi-squad club
 								</option>
 							</select>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-white">What are you hoping to solve?</span>
+							<span className="text-[#0D3C61]">What are you hoping to solve?</span>
 							<textarea
-								className="mt-2 min-h-[120px] w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
+								className="mt-2 min-h-[120px] w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
 								name="goals"
 								placeholder="Tell us about attendance, meet management, or parent communication..."
 								required
 							/>
 						</label>
 						<button
-							className="mt-6 w-full rounded-full bg-white px-6 py-3.5 text-base font-semibold text-slate-900 disabled:cursor-not-allowed disabled:opacity-70"
+							className="mt-6 w-full rounded-full bg-[#1E88E5] px-6 py-3.5 text-base font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
 							disabled={isSubmitting}
 							type="submit"
 						>
@@ -176,7 +176,7 @@ export default function Contact() {
 								{actionData.message}
 							</p>
 						)}
-						<p className="mt-3 text-xs text-white/65">
+						<p className="mt-3 text-xs text-[#0D3C61]/65">
 							By submitting, you agree to receive communications from LaneLines.
 						</p>
 					</Form>
