@@ -15,13 +15,13 @@ export default function Privacy() {
 	return (
 		<MarketingLayout>
 			<section className="mx-auto w-full max-w-4xl px-6 py-16">
-				<p className="text-sm uppercase tracking-[0.3em] text-white/60">Legal</p>
-				<h1 className="mt-4 text-4xl font-semibold text-white">Privacy Policy</h1>
-				<p className="mt-4 text-white/70">
+				<p className="text-sm uppercase tracking-[0.3em] text-[#0D3C61]/60">Legal</p>
+				<h1 className="mt-4 text-4xl font-semibold text-[#0D3C61]">Privacy Policy</h1>
+				<p className="mt-4 text-[#0D3C61]/70">
 					<strong>Effective Date:</strong> February 2026
 				</p>
 
-				<div className="mt-10 space-y-10 text-white/80">
+				<div className="mt-10 space-y-10 text-[#0D3C61]/80">
 					<p>
 						LaneLines ("LaneLines," "we," "us," or "our") provides a team-based swim program
 						management platform for coaches, guardians, and swimmers. This Privacy Policy explains
@@ -34,13 +34,13 @@ export default function Privacy() {
 					</p>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">1. Information We Collect</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">1. Information We Collect</h2>
 						<p className="mt-4">
 							We collect information necessary to operate a team-based sports management platform.
 							The categories below describe what we collect and why.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
 							1.1 Information You Provide Directly
 						</h3>
 						<p className="mt-2">
@@ -70,7 +70,7 @@ export default function Privacy() {
 							</li>
 						</ul>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
 							1.2 Information About Swimmers
 						</h3>
 						<p className="mt-2">For swimmers participating on teams, we may collect:</p>
@@ -85,7 +85,7 @@ export default function Privacy() {
 							not authenticate unless explicitly enabled by a team.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
 							1.3 Automatically Collected Information
 						</h3>
 						<p className="mt-2">When you use the Services, we may automatically collect:</p>
@@ -101,7 +101,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">2. How We Use Information</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">2. How We Use Information</h2>
 						<p className="mt-4">
 							We use collected information solely to operate and improve LaneLines, including to:
 						</p>
@@ -120,12 +120,12 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">3. How Information Is Shared</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">3. How Information Is Shared</h2>
 						<p className="mt-4">
 							We share information only as necessary and under strict controls:
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">3.1 Within Teams</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">3.1 Within Teams</h3>
 						<p className="mt-2">
 							Information is shared <strong>within a team</strong> according to role-based
 							permissions:
@@ -138,14 +138,14 @@ export default function Privacy() {
 							<li>Swimmer accounts (if enabled) have limited, self-only access</li>
 						</ul>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">3.2 Service Providers</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">3.2 Service Providers</h3>
 						<p className="mt-2">
 							We use trusted service providers (e.g., cloud hosting, authentication, databases)
 							to operate LaneLines. These providers process data only on our behalf and under
 							contractual confidentiality obligations.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">3.3 Legal Requirements</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">3.3 Legal Requirements</h3>
 						<p className="mt-2">
 							We may disclose information if required to comply with applicable laws,
 							regulations, or legal processes.
@@ -153,7 +153,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">4. Data Retention</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">4. Data Retention</h2>
 						<p className="mt-4">We retain personal information only as long as necessary to:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Provide the Services</li>
@@ -166,23 +166,23 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">5. User Rights and Choices</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">5. User Rights and Choices</h2>
 						<p className="mt-4">
 							Depending on your location, you may have the following rights:
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">5.1 Access and Correction</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">5.1 Access and Correction</h3>
 						<p className="mt-2">
 							You may access and update your account information through the app.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">5.2 Deletion</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">5.2 Deletion</h3>
 						<p className="mt-2">
 							You may request deletion of your account and associated personal data. Deletion
 							requests are subject to team-level data dependencies (e.g., historical records).
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-white">5.3 Data Portability</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">5.3 Data Portability</h3>
 						<p className="mt-2">
 							You may request a copy of your personal data in a commonly used, machine-readable
 							format.
@@ -193,11 +193,11 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">6. Children's Privacy (COPPA)</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">6. Children's Privacy (COPPA)</h2>
 						<p className="mt-4">
 							LaneLines is designed for organized youth sports and involves children under 13.
 						</p>
-						<h3 className="mt-6 text-lg font-semibold text-white">Key Protections:</h3>
+						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">Key Protections:</h3>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>
 								Child data is collected <strong>only with verifiable parental or guardian consent or through a team's external registration system</strong>
@@ -217,7 +217,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">
 							7. California Privacy Rights (CCPA/CPRA)
 						</h2>
 						<p className="mt-4">If you are a California resident, you have the right to:</p>
@@ -236,7 +236,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">8. Security</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">8. Security</h2>
 						<p className="mt-4">
 							We implement administrative, technical, and organizational safeguards designed to
 							protect personal information, including:
@@ -252,7 +252,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">9. Changes to This Policy</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">9. Changes to This Policy</h2>
 						<p className="mt-4">
 							We may update this Privacy Policy from time to time. Material changes will be
 							communicated through the app or website. The effective date will always be updated.
@@ -260,7 +260,7 @@ export default function Privacy() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-white">10. Contact Us</h2>
+						<h2 className="text-2xl font-semibold text-[#0D3C61]">10. Contact Us</h2>
 						<p className="mt-4">
 							If you have questions, concerns, or requests regarding this Privacy Policy or your
 							personal data, contact us at:
@@ -276,8 +276,8 @@ export default function Privacy() {
 						</p>
 					</div>
 
-					<div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-						<p className="text-white">
+					<div className="rounded-2xl border border-[#0D3C61]/15 bg-white p-6">
+						<p className="text-[#0D3C61]">
 							<strong>LaneLines</strong> is built to support youth sports safely, transparently,
 							and responsibly.
 						</p>
