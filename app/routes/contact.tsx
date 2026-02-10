@@ -31,9 +31,7 @@ export async function action({ context, request }: Route.ActionArgs) {
 		);
 	}
 
-	const env =
-		context.cloudflare?.env ??
-		(typeof process !== "undefined" ? process.env : undefined);
+	const env = context.cloudflare?.env ?? (typeof process !== "undefined" ? process.env : undefined);
 	const resendApiKey = env?.RESEND_API_KEY;
 	const toAddress = env?.DEMO_REQUEST_TO_EMAIL ?? "support@lanelinesapp.com";
 	const fromAddress = env?.DEMO_REQUEST_FROM_EMAIL ?? "LaneLines Demo <demo@lanelinesapp.com>";
@@ -92,28 +90,37 @@ export default function Contact() {
 
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-6xl px-6 py-16">
+			<section className="mx-auto w-full max-w-6xl px-6 py-12 md:py-16">
 				<div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
 					<div>
-						<h1 className="text-4xl font-semibold text-white">Let&apos;s talk swimming</h1>
-						<p className="mt-4 text-lg text-white/70">
-							Tell us about your team goals, season rhythm, and meet schedule. We&apos;ll respond
-							soon.
+						<h1 className="text-4xl font-semibold text-white md:text-5xl">Contact us</h1>
+						<p className="mt-4 text-lg text-white/80">
+							Tell us about your team goals, season rhythm, and meet schedule. We&apos;ll follow
+							up within one business day.
 						</p>
-						<div className="mt-8 space-y-4 text-sm text-white/70">
-							<p>
-								<span className="text-white">Email:</span> hello@lanelinesapp.com
-							</p>
+						<div className="mt-8 grid gap-3 sm:grid-cols-2">
+							<a
+								className="rounded-2xl border border-white/20 bg-white/5 px-5 py-4 text-base font-medium text-white hover:border-white/40"
+								href="mailto:hello@lanelinesapp.com"
+							>
+								Email us directly
+								<p className="mt-1 text-sm font-normal text-white/70">hello@lanelinesapp.com</p>
+							</a>
+							<a
+								className="rounded-2xl border border-white/20 bg-white/5 px-5 py-4 text-base font-medium text-white hover:border-white/40"
+								href="/pricing"
+							>
+								See plans first
+								<p className="mt-1 text-sm font-normal text-white/70">Compare options in under a minute</p>
+							</a>
 						</div>
 					</div>
-					<Form
-						className="rounded-3xl border border-white/10 bg-white/5 p-8 text-sm text-white/80"
-						method="post"
-					>
+					<Form className="rounded-3xl border border-white/15 bg-white/5 p-8 text-sm text-white/80" method="post">
+						<p className="mb-5 text-sm text-white/70">Complete this short form and we&apos;ll reach out quickly.</p>
 						<label className="block">
 							<span className="text-white">Name</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
 								name="name"
 								placeholder="Jane Doe"
 								required
@@ -123,7 +130,7 @@ export default function Contact() {
 						<label className="mt-5 block">
 							<span className="text-white">Work email</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
 								name="workEmail"
 								placeholder="jane@company.com"
 								required
@@ -133,7 +140,7 @@ export default function Contact() {
 						<label className="mt-5 block">
 							<span className="text-white">Team profile</span>
 							<select
-								className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white"
+								className="mt-2 w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white"
 								name="teamProfile"
 								required
 							>
@@ -151,25 +158,25 @@ export default function Contact() {
 						<label className="mt-5 block">
 							<span className="text-white">What are you hoping to solve?</span>
 							<textarea
-								className="mt-2 min-h-[120px] w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
+								className="mt-2 min-h-[120px] w-full rounded-2xl border border-white/30 bg-transparent px-4 py-3 text-base text-white placeholder:text-white/60"
 								name="goals"
 								placeholder="Tell us about attendance, meet management, or parent communication..."
 								required
 							/>
 						</label>
 						<button
-							className="mt-6 w-full rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 disabled:cursor-not-allowed disabled:opacity-70"
+							className="mt-6 w-full rounded-full bg-white px-6 py-3.5 text-base font-semibold text-slate-900 disabled:cursor-not-allowed disabled:opacity-70"
 							disabled={isSubmitting}
 							type="submit"
 						>
-							{isSubmitting ? "Submitting..." : "Submit request"}
+							{isSubmitting ? "Submitting..." : "Send message"}
 						</button>
 						{actionData && (
-							<p className={`mt-3 text-xs ${actionData.success ? "text-emerald-300" : "text-rose-300"}`}>
+							<p className={`mt-3 text-sm ${actionData.success ? "text-emerald-300" : "text-rose-300"}`}>
 								{actionData.message}
 							</p>
 						)}
-						<p className="mt-3 text-xs text-white/60">
+						<p className="mt-3 text-xs text-white/65">
 							By submitting, you agree to receive communications from LaneLines.
 						</p>
 					</Form>
