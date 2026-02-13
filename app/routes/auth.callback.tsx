@@ -23,6 +23,23 @@ function parseAuthParams(url: URL) {
 	};
 }
 
+function safeDecodeURIComponent(value: string) {
+	try {
+		return decodeURIComponent(value);
+	} catch {
+		return value;
+	}
+}
+
+function stripSensitiveAuthParams(url: URL) {
+	const nextUrl = new URL(url.toString());
+	nextUrl.searchParams.delete("code");
+	nextUrl.searchParams.delete("error");
+	nextUrl.searchParams.delete("error_description");
+	nextUrl.hash = "";
+	window.history.replaceState({}, document.title, nextUrl.toString());
+}
+
 export default function AuthCallbackRoute() {
 	const supabase = useSupabaseClient();
 	const [status, setStatus] = useState<Status>({
@@ -42,9 +59,10 @@ export default function AuthCallbackRoute() {
 
 		const url = new URL(window.location.href);
 		const { code, accessToken, refreshToken, error } = parseAuthParams(url);
+		stripSensitiveAuthParams(url);
 
 		if (error) {
-			setStatus({ state: "error", message: decodeURIComponent(error) });
+			setStatus({ state: "error", message: safeDecodeURIComponent(error) });
 			return;
 		}
 
