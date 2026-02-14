@@ -7,6 +7,15 @@ type ActionData = {
 	message: string;
 };
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_NAME_LENGTH = 120;
+const MAX_GOALS_LENGTH = 4000;
+const MAX_TEAM_PROFILE_LENGTH = 120;
+
+function isSuspicious(value: string) {
+	return /[\r\n]/.test(value);
+}
+
 export function meta({}: Route.MetaArgs) {
 	return [
 		{ title: "Contact LaneLines" },
@@ -19,14 +28,47 @@ export function meta({}: Route.MetaArgs) {
 
 export async function action({ context, request }: Route.ActionArgs) {
 	const formData = await request.formData();
-	const name = formData.get("name")?.toString().trim();
-	const workEmail = formData.get("workEmail")?.toString().trim();
-	const teamProfile = formData.get("teamProfile")?.toString().trim();
-	const goals = formData.get("goals")?.toString().trim();
+	const honeypot = formData.get("company")?.toString().trim();
+	if (honeypot) {
+		return Response.json<ActionData>({
+			success: true,
+			message: "Thanks! Your demo request has been sent.",
+		});
+	}
+
+	const name = formData.get("name")?.toString().trim() ?? "";
+	const workEmail = formData.get("workEmail")?.toString().trim() ?? "";
+	const teamProfile = formData.get("teamProfile")?.toString().trim() ?? "";
+	const goals = formData.get("goals")?.toString().trim() ?? "";
 
 	if (!name || !workEmail || !teamProfile || !goals) {
 		return Response.json<ActionData>(
 			{ success: false, message: "Please complete all fields before submitting." },
+			{ status: 400 },
+		);
+	}
+
+	if (
+		name.length > MAX_NAME_LENGTH ||
+		teamProfile.length > MAX_TEAM_PROFILE_LENGTH ||
+		goals.length > MAX_GOALS_LENGTH
+	) {
+		return Response.json<ActionData>(
+			{ success: false, message: "One or more fields are too long." },
+			{ status: 400 },
+		);
+	}
+
+	if (!EMAIL_PATTERN.test(workEmail)) {
+		return Response.json<ActionData>(
+			{ success: false, message: "Please provide a valid work email." },
+			{ status: 400 },
+		);
+	}
+
+	if ([name, workEmail, teamProfile].some(isSuspicious)) {
+		return Response.json<ActionData>(
+			{ success: false, message: "Invalid characters detected in form fields." },
 			{ status: 400 },
 		);
 	}
@@ -117,6 +159,14 @@ export default function Contact() {
 					</div>
 					<Form className="rounded-3xl border border-[#0D3C61]/15 bg-white p-8 text-sm text-[#0D3C61]/85 shadow-sm" method="post">
 						<p className="mb-5 text-sm text-[#0D3C61]/70">Complete this short form and we&apos;ll reach out quickly.</p>
+						<input
+							aria-hidden="true"
+							autoComplete="off"
+							className="hidden"
+							name="company"
+							tabIndex={-1}
+							type="text"
+						/>
 						<label className="block">
 							<span className="text-[#0D3C61]">Name</span>
 							<input
@@ -125,6 +175,7 @@ export default function Contact() {
 								placeholder="Jane Doe"
 								required
 								type="text"
+								maxLength={MAX_NAME_LENGTH}
 							/>
 						</label>
 						<label className="mt-5 block">
@@ -162,6 +213,7 @@ export default function Contact() {
 								name="goals"
 								placeholder="Tell us about attendance, meet management, or parent communication..."
 								required
+								maxLength={MAX_GOALS_LENGTH}
 							/>
 						</label>
 						<button
