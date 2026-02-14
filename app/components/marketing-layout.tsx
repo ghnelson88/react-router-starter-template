@@ -109,6 +109,9 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 						</Link>
 					</div>
 				</div>
+				<div className="border-t border-[#0D3C61]/10 py-4 text-center text-xs text-[#0D3C61]/50">
+					© 2026 G&J Family Ventures LLC. All rights reserved.
+				</div>
 			</footer>
 		</div>
 	);

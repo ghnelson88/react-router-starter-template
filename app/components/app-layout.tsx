@@ -41,6 +41,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 			<main className="mx-auto w-full max-w-6xl px-6 py-10">
 				{children}
 			</main>
+			<footer className="border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-400">
+				© 2026 G&J Family Ventures LLC. All rights reserved.
+			</footer>
 		</div>
 	);
 }
