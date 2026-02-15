@@ -4,11 +4,11 @@ import { MarketingLayout } from "../components/marketing-layout";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "LaneLines | Run Meets Without the Chaos" },
+		{ title: "LaneLines | Operational Clarity for Competitive Swim Teams" },
 		{
 			name: "description",
 			content:
-				"LaneLines is the system of record for swim meet operations, built for year-round USA Swimming clubs.",
+				"LaneLines is the system of record for swim team operations, built for year-round USA Swimming clubs.",
 		},
 	];
 }
@@ -129,16 +129,17 @@ export default function Home() {
 				<div className="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-16 md:pb-24 md:pt-24">
 					<div className="mx-auto max-w-3xl text-center">
 						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-							Swim meet operations
+							Team operations infrastructure
 						</p>
 						<h1 className="mt-4 text-4xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-6xl md:leading-[1.08]">
-							Run Meets Without
+							Run Your Program
 							<br />
-							the Chaos.
+							Without the Chaos.
 						</h1>
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#2F3A45]/70">
-							LaneLines is the system of record for swim meet operations — built for year-round
-							USA Swimming clubs who want clarity, not more spreadsheets.
+							LaneLines is the system of record for swim team operations — built for year-round
+							USA Swimming clubs who need structure across meet prep, attendance, volunteer
+							coordination, and practice alignment.
 						</p>
 						<p className="mt-3 text-sm text-[#2F3A45]/50">
 							Works alongside your existing registration platform.
@@ -224,11 +225,11 @@ export default function Home() {
 						What LaneLines owns
 					</p>
 					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-						One hub for meet operations.
+						One hub for team operations.
 					</h2>
 					<p className="mt-4 text-base text-[#2F3A45]/60">
-						LaneLines centralizes the work that falls through the cracks. Decision support — not
-						automation. Coaches stay in control.
+						LaneLines brings structure to the operational work that falls between registration
+						and the pool deck. Decision support — not automation. Coaches stay in control.
 					</p>
 				</div>
 
@@ -247,11 +248,11 @@ export default function Home() {
 						{
 							title: "Coaching Clarity",
 							description:
-								"Track attendance trends by practice group. Publish plans to families. Keep best times ready for relay decisions.",
+								"Track attendance patterns across practice groups. Align training plans with families. Keep best times organized for lineup and relay decisions.",
 							items: [
-								"Attendance trends by group",
-								"Practice plans published to families",
-								"Best times for relay planning",
+								"Attendance patterns by practice group",
+								"Training plans aligned with families",
+								"Best times for lineup and relay decisions",
 							],
 						},
 						{
@@ -298,8 +299,8 @@ export default function Home() {
 								Works alongside what you already use.
 							</h2>
 							<p className="mt-4 text-base leading-relaxed text-[#2F3A45]/60">
-								We work alongside platforms like SportsEngine and TeamUnify. You keep what works.
-								We fix meet chaos.
+								LaneLines works alongside platforms like SportsEngine and TeamUnify. You keep
+								what works. We bring operational structure.
 							</p>
 						</div>
 						<div className="space-y-4">
@@ -342,7 +343,7 @@ export default function Home() {
 						Built for competitive clubs.
 					</h2>
 					<p className="mt-4 text-base text-[#2F3A45]/60">
-						If you&apos;re running serious meets, this is for you.
+						If you&apos;re running a serious competitive program, this is for you.
 					</p>
 				</div>
 				<div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
