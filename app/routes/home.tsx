@@ -96,13 +96,13 @@ function DashboardMockup() {
 							</span>
 						</div>
 						<div className="flex items-center justify-between px-3 py-2">
-							<span className="text-[#2F3A45]/70">Stroke & Turn (Lane 1-3)</span>
+							<span className="text-[#2F3A45]/70">Stroke & Turn</span>
 							<span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">
 								Filled
 							</span>
 						</div>
 						<div className="flex items-center justify-between px-3 py-2">
-							<span className="text-[#2F3A45]/70">Stroke & Turn (Lane 4-6)</span>
+							<span className="text-[#2F3A45]/70">Stroke & Turn</span>
 							<span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-medium text-amber-700">
 								Needs 1
 							</span>
