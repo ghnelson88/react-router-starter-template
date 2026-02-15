@@ -2,9 +2,9 @@ import { Link } from "react-router";
 
 const navLinks = [
 	{ label: "Pricing", to: "/pricing" },
+	{ label: "Founding Pilot", to: "/founding-pilot" },
 	{ label: "About", to: "/about" },
 	{ label: "Contact", to: "/contact" },
-	{ label: "Guidelines", to: "/community-guidelines" },
 ];
 
 export function MarketingLayout({ children }: { children: React.ReactNode }) {
