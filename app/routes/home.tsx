@@ -13,187 +13,410 @@ export function meta({}: Route.MetaArgs) {
 	];
 }
 
+function CheckIcon() {
+	return (
+		<svg
+			className="mt-0.5 h-4 w-4 shrink-0 text-[#2E6F95]"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			strokeWidth={2}
+		>
+			<path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+		</svg>
+	);
+}
+
+function DashboardMockup() {
+	return (
+		<div className="rounded-xl border border-[#0F1E2E]/8 bg-white shadow-lg shadow-[#0F1E2E]/5">
+			{/* Title bar */}
+			<div className="flex items-center gap-2 border-b border-[#0F1E2E]/6 px-5 py-3">
+				<div className="flex gap-1.5">
+					<span className="h-2.5 w-2.5 rounded-full bg-[#0F1E2E]/10" />
+					<span className="h-2.5 w-2.5 rounded-full bg-[#0F1E2E]/10" />
+					<span className="h-2.5 w-2.5 rounded-full bg-[#0F1E2E]/10" />
+				</div>
+				<span className="ml-2 text-xs font-medium text-[#2F3A45]/40">
+					Meet Readiness — Spring Invitational
+				</span>
+			</div>
+
+			{/* Dashboard content */}
+			<div className="p-5">
+				{/* Stat row */}
+				<div className="grid grid-cols-3 gap-3">
+					<div className="rounded-lg border border-[#0F1E2E]/6 p-3">
+						<p className="text-[10px] font-medium uppercase tracking-wider text-[#2F3A45]/40">
+							Entries
+						</p>
+						<p className="mt-1 text-2xl font-semibold tracking-tight text-[#0F1E2E]">
+							87<span className="text-sm font-normal text-[#2F3A45]/40">/94</span>
+						</p>
+						<div className="mt-2 h-1.5 rounded-full bg-[#0F1E2E]/6">
+							<div className="h-1.5 w-[93%] rounded-full bg-[#2E6F95]" />
+						</div>
+					</div>
+					<div className="rounded-lg border border-[#0F1E2E]/6 p-3">
+						<p className="text-[10px] font-medium uppercase tracking-wider text-[#2F3A45]/40">
+							Volunteers
+						</p>
+						<p className="mt-1 text-2xl font-semibold tracking-tight text-[#0F1E2E]">
+							12<span className="text-sm font-normal text-[#2F3A45]/40">/18</span>
+						</p>
+						<div className="mt-2 h-1.5 rounded-full bg-[#0F1E2E]/6">
+							<div className="h-1.5 w-[67%] rounded-full bg-amber-500" />
+						</div>
+					</div>
+					<div className="rounded-lg border border-[#0F1E2E]/6 p-3">
+						<p className="text-[10px] font-medium uppercase tracking-wider text-[#2F3A45]/40">
+							RSVPs
+						</p>
+						<p className="mt-1 text-2xl font-semibold tracking-tight text-[#0F1E2E]">
+							71<span className="text-sm font-normal text-[#2F3A45]/40">/94</span>
+						</p>
+						<div className="mt-2 h-1.5 rounded-full bg-[#0F1E2E]/6">
+							<div className="h-1.5 w-[76%] rounded-full bg-[#2E6F95]" />
+						</div>
+					</div>
+				</div>
+
+				{/* Table preview */}
+				<div className="mt-4 rounded-lg border border-[#0F1E2E]/6">
+					<div className="border-b border-[#0F1E2E]/6 px-3 py-2">
+						<p className="text-[10px] font-semibold uppercase tracking-wider text-[#2F3A45]/40">
+							Volunteer Coverage
+						</p>
+					</div>
+					<div className="divide-y divide-[#0F1E2E]/4 text-xs">
+						<div className="flex items-center justify-between px-3 py-2">
+							<span className="text-[#2F3A45]/70">Head Timer</span>
+							<span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">
+								Filled
+							</span>
+						</div>
+						<div className="flex items-center justify-between px-3 py-2">
+							<span className="text-[#2F3A45]/70">Stroke & Turn (Lane 1-3)</span>
+							<span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">
+								Filled
+							</span>
+						</div>
+						<div className="flex items-center justify-between px-3 py-2">
+							<span className="text-[#2F3A45]/70">Stroke & Turn (Lane 4-6)</span>
+							<span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-medium text-amber-700">
+								Needs 1
+							</span>
+						</div>
+						<div className="flex items-center justify-between px-3 py-2">
+							<span className="text-[#2F3A45]/70">Concessions Lead</span>
+							<span className="rounded-full bg-rose-50 px-2 py-0.5 text-[10px] font-medium text-rose-700">
+								Open
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+
 export default function Home() {
 	return (
 		<MarketingLayout>
 			{/* Hero */}
-			<section className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
-				<h1 className="text-4xl font-semibold leading-tight text-[#0D3C61] md:text-5xl">
-					Run Meets Without the Chaos.
-				</h1>
-				<p className="mt-6 max-w-2xl text-lg text-[#0D3C61]/85">
-					LaneLines is the <strong>system of record for swim meet operations</strong> — built
-					for year-round USA Swimming clubs who want clarity, not more spreadsheets.
-				</p>
-				<p className="mt-4 text-base text-[#0D3C61]/75">
-					Works alongside your existing registration platform.
-				</p>
-				<div className="mt-8 flex flex-wrap gap-4">
-					<Link
-						className="rounded-full bg-[#1E88E5] px-6 py-3.5 text-base font-semibold text-white transition hover:bg-[#1565C0]"
-						to="/founding-pilot"
-					>
-						Apply for Founding Pilot Access
-					</Link>
-					<Link
-						className="rounded-full border border-[#0D3C61]/25 bg-white px-6 py-3.5 text-base font-semibold text-[#0D3C61] transition hover:border-[#0D3C61]/55"
-						to="/pricing"
-					>
-						View Pricing
-					</Link>
+			<section className="relative overflow-hidden">
+				<div className="absolute inset-0 bg-gradient-to-b from-white to-[#F5F7F9]" />
+				<div className="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-16 md:pb-24 md:pt-24">
+					<div className="mx-auto max-w-3xl text-center">
+						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+							Swim meet operations
+						</p>
+						<h1 className="mt-4 text-4xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-6xl md:leading-[1.08]">
+							Run Meets Without
+							<br />
+							the Chaos.
+						</h1>
+						<p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#2F3A45]/70">
+							LaneLines is the system of record for swim meet operations — built for year-round
+							USA Swimming clubs who want clarity, not more spreadsheets.
+						</p>
+						<p className="mt-3 text-sm text-[#2F3A45]/50">
+							Works alongside your existing registration platform.
+						</p>
+						<div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+							<Link
+								className="rounded-lg bg-[#0F1E2E] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0F1E2E]/90"
+								to="/founding-pilot"
+							>
+								Apply for Founding Pilot Access
+							</Link>
+							<Link
+								className="rounded-lg border border-[#0F1E2E]/12 bg-white px-5 py-3 text-sm font-semibold text-[#0F1E2E] hover:border-[#0F1E2E]/25 hover:bg-[#F5F7F9]"
+								to="/pricing"
+							>
+								View Pricing
+							</Link>
+						</div>
+					</div>
+
+					{/* Dashboard mockup */}
+					<div className="mx-auto mt-16 max-w-2xl">
+						<DashboardMockup />
+					</div>
 				</div>
 			</section>
 
-			{/* The Real Problem */}
-			<section className="border-y border-[#0D3C61]/15 bg-white">
-				<div className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
-					<h2 className="text-3xl font-semibold text-[#0D3C61]">The Real Problem</h2>
-					<p className="mt-4 text-base text-[#0D3C61]/80">By Thursday before a meet:</p>
-					<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							RSVPs are incomplete
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Volunteer roles aren't filled
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Coaches are chasing confirmations
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Parents are digging through email
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Lineups are being rebuilt manually
-						</li>
-					</ul>
-					<p className="mt-6 text-base text-[#0D3C61]/80">
-						Swim teams don't struggle with effort.
-					</p>
-					<p className="text-base font-semibold text-[#0D3C61]">
-						They struggle with coordination.
-					</p>
+			{/* Problem */}
+			<section className="border-y border-[#0F1E2E]/6 bg-white">
+				<div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+					<div className="mx-auto max-w-2xl">
+						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+							The problem
+						</p>
+						<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
+							By Thursday before a meet, everything&apos;s unraveling.
+						</h2>
+						<div className="mt-8 space-y-4">
+							{[
+								"RSVPs are incomplete",
+								"Volunteer roles aren't filled",
+								"Coaches are chasing confirmations",
+								"Parents are digging through email",
+								"Lineups are being rebuilt manually",
+							].map((item) => (
+								<div
+									key={item}
+									className="flex items-start gap-3 rounded-lg border border-[#0F1E2E]/6 bg-[#F5F7F9] px-4 py-3"
+								>
+									<svg
+										className="mt-0.5 h-4 w-4 shrink-0 text-[#2F3A45]/30"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										strokeWidth={2}
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+										/>
+									</svg>
+									<span className="text-sm text-[#2F3A45]/80">{item}</span>
+								</div>
+							))}
+						</div>
+						<div className="mt-8 border-l-2 border-[#2E6F95] pl-4">
+							<p className="text-sm text-[#2F3A45]/60">
+								Swim teams don&apos;t struggle with effort.
+							</p>
+							<p className="mt-1 text-base font-semibold text-[#0F1E2E]">
+								They struggle with coordination.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			{/* What LaneLines Owns */}
-			<section className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
-				<h2 className="text-3xl font-semibold text-[#0D3C61]">What LaneLines Owns</h2>
-				<p className="mt-4 text-base text-[#0D3C61]/80">
-					LaneLines centralizes meet operations in one clear hub.
-				</p>
-
-				<div className="mt-10 grid gap-8 md:grid-cols-3">
-					<div>
-						<h3 className="text-xl font-semibold text-[#0D3C61]">Meet Readiness</h3>
-						<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-							<li>Entries, RSVPs, and attendance in one place</li>
-							<li>Volunteer coverage at a glance</li>
-							<li>Clear signals when something's slipping</li>
-						</ul>
-					</div>
-					<div>
-						<h3 className="text-xl font-semibold text-[#0D3C61]">Coaching Clarity</h3>
-						<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-							<li>Attendance trends by practice group</li>
-							<li>Practice plans published to families</li>
-							<li>Best times ready for relay planning</li>
-						</ul>
-					</div>
-					<div>
-						<h3 className="text-xl font-semibold text-[#0D3C61]">Family Alignment</h3>
-						<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-							<li>One source for schedules and updates</li>
-							<li>Transparent volunteer expectations</li>
-							<li>No hunting through text threads</li>
-						</ul>
-					</div>
+			{/* Product Value — Three Columns */}
+			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+				<div className="mx-auto max-w-2xl text-center">
+					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+						What LaneLines owns
+					</p>
+					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
+						One hub for meet operations.
+					</h2>
+					<p className="mt-4 text-base text-[#2F3A45]/60">
+						LaneLines centralizes the work that falls through the cracks. Decision support — not
+						automation. Coaches stay in control.
+					</p>
 				</div>
 
-				<p className="mt-8 text-base font-semibold text-[#0D3C61]">
-					Decision support — not automation. Coaches stay in control.
-				</p>
+				<div className="mt-14 grid gap-6 md:grid-cols-3">
+					{[
+						{
+							title: "Meet Readiness",
+							description:
+								"See entries, RSVPs, and attendance in one view. Know volunteer coverage at a glance. Get clear signals when something's slipping.",
+							items: [
+								"Entries and RSVPs unified",
+								"Volunteer coverage tracking",
+								"Readiness signals before meet day",
+							],
+						},
+						{
+							title: "Coaching Clarity",
+							description:
+								"Track attendance trends by practice group. Publish plans to families. Keep best times ready for relay decisions.",
+							items: [
+								"Attendance trends by group",
+								"Practice plans published to families",
+								"Best times for relay planning",
+							],
+						},
+						{
+							title: "Family Alignment",
+							description:
+								"One source for schedules and updates. Transparent volunteer expectations. No hunting through text threads.",
+							items: [
+								"Single source for schedules",
+								"Transparent volunteer expectations",
+								"No more text thread hunting",
+							],
+						},
+					].map((card) => (
+						<div
+							key={card.title}
+							className="rounded-xl border border-[#0F1E2E]/6 bg-white p-6"
+						>
+							<h3 className="text-lg font-semibold text-[#0F1E2E]">{card.title}</h3>
+							<p className="mt-2 text-sm leading-relaxed text-[#2F3A45]/60">
+								{card.description}
+							</p>
+							<ul className="mt-5 space-y-3">
+								{card.items.map((item) => (
+									<li key={item} className="flex items-start gap-2.5 text-sm text-[#2F3A45]/70">
+										<CheckIcon />
+										{item}
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
 			</section>
 
 			{/* Works Alongside */}
-			<section className="border-y border-[#0D3C61]/15 bg-white">
-				<div className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
-					<h2 className="text-3xl font-semibold text-[#0D3C61]">
-						Works Alongside What You Already Use
-					</h2>
-					<p className="mt-4 text-base text-[#0D3C61]/80">LaneLines does not replace:</p>
-					<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Registration
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Billing
-						</li>
-						<li className="flex items-start gap-3">
-							<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-							Governing body compliance
-						</li>
-					</ul>
-					<p className="mt-6 text-base text-[#0D3C61]/80">
-						We work alongside platforms like SportsEngine and TeamUnify.
-					</p>
-					<p className="mt-2 text-base text-[#0D3C61]/80">
-						You keep what works. We fix meet chaos.
-					</p>
+			<section className="border-y border-[#0F1E2E]/6 bg-white">
+				<div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+					<div className="grid gap-12 md:grid-cols-2 md:items-center">
+						<div>
+							<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+								Integration
+							</p>
+							<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
+								Works alongside what you already use.
+							</h2>
+							<p className="mt-4 text-base leading-relaxed text-[#2F3A45]/60">
+								We work alongside platforms like SportsEngine and TeamUnify. You keep what works.
+								We fix meet chaos.
+							</p>
+						</div>
+						<div className="space-y-4">
+							{[
+								{
+									label: "Registration",
+									desc: "Stays where it is. We don't touch it.",
+								},
+								{
+									label: "Billing",
+									desc: "Your billing system remains unchanged.",
+								},
+								{
+									label: "Governing body compliance",
+									desc: "USA Swimming compliance is not our scope.",
+								},
+							].map((item) => (
+								<div
+									key={item.label}
+									className="rounded-lg border border-[#0F1E2E]/6 bg-[#F5F7F9] p-4"
+								>
+									<p className="text-sm font-semibold text-[#0F1E2E]">
+										{item.label}
+									</p>
+									<p className="mt-1 text-sm text-[#2F3A45]/60">{item.desc}</p>
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
 			</section>
 
 			{/* Built for Competitive Clubs */}
-			<section className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
-				<h2 className="text-3xl font-semibold text-[#0D3C61]">Built for Competitive Clubs</h2>
-				<p className="mt-4 text-base text-[#0D3C61]/80">Designed for:</p>
-				<ul className="mt-4 space-y-2 text-base text-[#0D3C61]/80">
-					<li className="flex items-start gap-3">
-						<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-						60–150 swimmer year-round programs
-					</li>
-					<li className="flex items-start gap-3">
-						<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-						Multi-group practice structures
-					</li>
-					<li className="flex items-start gap-3">
-						<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-						Volunteer-dependent meets
-					</li>
-					<li className="flex items-start gap-3">
-						<span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1E88E5]" />
-						Coaching staffs who need operational clarity
-					</li>
-				</ul>
-				<p className="mt-6 text-base font-semibold text-[#0D3C61]">
-					If you're running serious meets, this is for you.
-				</p>
+			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+				<div className="mx-auto max-w-2xl text-center">
+					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+						Who it&apos;s for
+					</p>
+					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
+						Built for competitive clubs.
+					</h2>
+					<p className="mt-4 text-base text-[#2F3A45]/60">
+						If you&apos;re running serious meets, this is for you.
+					</p>
+				</div>
+				<div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+					{[
+						"60–150 swimmer year-round programs",
+						"Multi-group practice structures",
+						"Volunteer-dependent meets",
+						"Coaching staffs who need operational clarity",
+					].map((item) => (
+						<div
+							key={item}
+							className="flex items-start gap-3 rounded-lg border border-[#0F1E2E]/6 bg-white p-4"
+						>
+							<CheckIcon />
+							<span className="text-sm text-[#2F3A45]/70">{item}</span>
+						</div>
+					))}
+				</div>
 			</section>
 
-			{/* Founding Pilot CTA */}
-			<section className="border-t border-[#0D3C61]/15 bg-white">
-				<div className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
-					<h2 className="text-3xl font-semibold text-[#0D3C61]">Founding Pilot Cohort</h2>
-					<p className="mt-4 text-base text-[#0D3C61]/80">
-						We are onboarding a limited number of year-round competitive clubs.
-					</p>
-					<div className="mt-6 space-y-2 text-base text-[#0D3C61]/80">
-						<p>Full platform access.</p>
-						<p>Guided onboarding.</p>
-						<p>Direct roadmap influence.</p>
+			{/* Pricing Preview */}
+			<section className="border-y border-[#0F1E2E]/6 bg-white">
+				<div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+					<div className="mx-auto max-w-2xl text-center">
+						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
+							Pricing
+						</p>
+						<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
+							Simple, flat pricing.
+						</h2>
+						<p className="mt-4 text-base text-[#2F3A45]/60">
+							One license covers your entire club. No per-swimmer fees. No feature tiers.
+						</p>
 					</div>
-					<p className="mt-6 text-base font-semibold text-[#0D3C61]">
-						100% discounted through the end of your current competitive season.
+					<div className="mx-auto mt-10 max-w-md rounded-xl border border-[#0F1E2E]/8 bg-[#F5F7F9] p-8 text-center">
+						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2F3A45]/40">
+							Standard Club License
+						</p>
+						<p className="mt-3 text-5xl font-bold tracking-tight text-[#0F1E2E]">
+							$1,800
+						</p>
+						<p className="mt-1 text-sm text-[#2F3A45]/50">per club, per year</p>
+						<div className="my-6 border-t border-[#0F1E2E]/8" />
+						<p className="text-sm font-medium text-[#2E6F95]">
+							Founding pilot clubs: 100% discounted through end of season.
+						</p>
+						<div className="mt-6">
+							<Link
+								className="inline-block rounded-lg bg-[#0F1E2E] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0F1E2E]/90"
+								to="/pricing"
+							>
+								View Full Pricing
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Final CTA */}
+			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+				<div className="mx-auto max-w-2xl rounded-2xl border border-[#0F1E2E]/8 bg-[#0F1E2E] p-10 text-center md:p-14">
+					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+						Founding Pilot
+					</p>
+					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-white md:text-4xl">
+						Join the founding cohort.
+					</h2>
+					<p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-white/60">
+						Full platform access. Guided onboarding. Direct roadmap influence. Limited to a
+						small number of competitive clubs.
 					</p>
 					<div className="mt-8">
 						<Link
-							className="rounded-full bg-[#1E88E5] px-6 py-3.5 text-base font-semibold text-white transition hover:bg-[#1565C0]"
+							className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#0F1E2E] hover:bg-white/90"
 							to="/founding-pilot"
 						>
 							Apply for Founding Pilot Access
