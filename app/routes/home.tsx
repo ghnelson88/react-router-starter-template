@@ -8,7 +8,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"LaneLines is the system of record for swim team operations, built for year-round USA Swimming clubs.",
+				"LaneLines is the team operations platform for year-round USA Swimming clubs, bringing structure to communication, attendance, volunteer coordination, meet operations, and team billing.",
 		},
 	];
 }
@@ -129,33 +129,31 @@ export default function Home() {
 				<div className="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-16 md:pb-24 md:pt-24">
 					<div className="mx-auto max-w-3xl text-center">
 						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-							Team operations infrastructure
+							Streamlined Team Operations
 						</p>
 						<h1 className="mt-4 text-4xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-6xl md:leading-[1.08]">
-							Run Your Program
-							<br />
-							Without the Chaos.
+							Streamlined Team Operations
 						</h1>
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#2F3A45]/70">
-							LaneLines is the system of record for swim team operations — built for year-round
-							USA Swimming clubs who need structure across meet prep, attendance, volunteer
-							coordination, and practice alignment.
+							LaneLines is the team operations platform for year-round USA Swimming clubs —
+							organizing communication, attendance, volunteer coordination, and meet planning.
+							We keep your team circle swimming.
 						</p>
 						<p className="mt-3 text-sm text-[#2F3A45]/50">
-							Works alongside your existing registration platform.
+							Built to reduce chaos with calm, structured workflows.
 						</p>
 						<div className="mt-8 flex flex-wrap items-center justify-center gap-3">
 							<Link
 								className="rounded-lg bg-[#0F1E2E] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0F1E2E]/90"
 								to="/founding-pilot"
 							>
-								Apply for Founding Pilot Access
+								See How It Works
 							</Link>
 							<Link
 								className="rounded-lg border border-[#0F1E2E]/12 bg-white px-5 py-3 text-sm font-semibold text-[#0F1E2E] hover:border-[#0F1E2E]/25 hover:bg-[#F5F7F9]"
 								to="/pricing"
 							>
-								View Pricing
+								Start With Your Next Meet
 							</Link>
 						</div>
 					</div>
@@ -175,15 +173,14 @@ export default function Home() {
 							The problem
 						</p>
 						<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-							By Thursday before a meet, everything&apos;s unraveling.
+							Coaches Love Coaching. They Burn Out From Chaos.
 						</h2>
 						<div className="mt-8 space-y-4">
 							{[
-								"RSVPs are incomplete",
-								"Volunteer roles aren't filled",
-								"Coaches are chasing confirmations",
-								"Parents are digging through email",
-								"Lineups are being rebuilt manually",
+								"Text chains about timers",
+								"Parents asking, \"What time do we warm up?\"",
+								"Volunteer spots filled at the last minute",
+								"Coaches chasing confirmations for relays",
 							].map((item) => (
 								<div
 									key={item}
@@ -208,10 +205,10 @@ export default function Home() {
 						</div>
 						<div className="mt-8 border-l-2 border-[#2E6F95] pl-4">
 							<p className="text-sm text-[#2F3A45]/60">
-								Swim teams don&apos;t struggle with effort.
+								Most swim teams don&apos;t lack effort.
 							</p>
 							<p className="mt-1 text-base font-semibold text-[#0F1E2E]">
-								They struggle with coordination.
+								They lack operational structure. LaneLines brings that structure.
 							</p>
 						</div>
 					</div>
@@ -222,47 +219,62 @@ export default function Home() {
 			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
 				<div className="mx-auto max-w-2xl text-center">
 					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-						What LaneLines owns
+						What LaneLines does
 					</p>
 					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-						One hub for team operations.
+						Operational Clarity for Competitive Swim Teams
 					</h2>
 					<p className="mt-4 text-base text-[#2F3A45]/60">
-						LaneLines brings structure to the operational work that falls between registration
-						and the pool deck. Decision support — not automation. Coaches stay in control.
+						LaneLines replaces scattered tools with structured systems designed specifically for
+						year-round USA Swimming clubs.
 					</p>
 				</div>
 
 				<div className="mt-14 grid gap-6 md:grid-cols-3">
 					{[
 						{
-							title: "Meet Readiness",
+							title: "Structured Communication",
 							description:
-								"See entries, RSVPs, and attendance in one view. Know volunteer coverage at a glance. Get clear signals when something's slipping.",
+								"Keep coaches, assistants, and parents aligned with clear updates tied to what happens next.",
 							items: [
-								"Entries and RSVPs unified",
-								"Volunteer coverage tracking",
-								"Readiness signals before meet day",
+								"Lifecycle-managed announcements",
+								"Action deadlines with reminders",
+								"Event-linked logistics",
+								"Automatic expiration for old posts",
 							],
 						},
 						{
-							title: "Coaching Clarity",
+							title: "Attendance & RSVP Tracking",
 							description:
-								"Track attendance patterns across practice groups. Align training plans with families. Keep best times organized for lineup and relay decisions.",
+								"See swimmer and meet availability early so coaches can make decisions before crunch time.",
 							items: [
-								"Attendance patterns by practice group",
-								"Training plans aligned with families",
-								"Best times for lineup and relay decisions",
+								"Swimmer-level availability",
+								"Meet attendance visibility",
+								"Low-RSVP alerts before it becomes a problem",
+								"Clear coach dashboards",
 							],
 						},
 						{
-							title: "Family Alignment",
+							title: "Volunteer Coordination",
 							description:
-								"One source for schedules and updates. Transparent volunteer expectations. No hunting through text threads.",
+								"Define roles, manage capacity, and track coverage so meet-week staffing stays stable.",
 							items: [
-								"Single source for schedules",
-								"Transparent volunteer expectations",
-								"No more text thread hunting",
+								"Defined meet roles",
+								"Capacity-controlled signups",
+								"Real-time coverage tracking",
+								"End-of-season reconciliation",
+							],
+						},
+						{
+							title: "Meet & Team Operations",
+							description:
+								"Coordinate groups, assignments, and schedules with shared operational visibility across staff.",
+							items: [
+								"Group organization",
+								"Meet assignments",
+								"Practice scheduling",
+								"Assistant coach clarity",
+								"Team billing when you're ready",
 							],
 						},
 					].map((card) => (
@@ -287,35 +299,45 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Works Alongside */}
+			{/* Registrar Reassurance */}
 			<section className="border-y border-[#0F1E2E]/6 bg-white">
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
 					<div className="grid gap-12 md:grid-cols-2 md:items-center">
 						<div>
 							<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-								Integration
+								Registrar reassurance
 							</p>
 							<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-								Works alongside what you already use.
+								Works With Your Existing Registration System
 							</h2>
 							<p className="mt-4 text-base leading-relaxed text-[#2F3A45]/60">
-								LaneLines works alongside platforms like SportsEngine and TeamUnify. You keep
-								what works. We bring operational structure.
+								LaneLines does not replace your governing body registration platform.
+							</p>
+							<p className="mt-4 text-base leading-relaxed text-[#2F3A45]/60">
+								Registration, eligibility, and compliance remain exactly where they are today.
 							</p>
 						</div>
 						<div className="space-y-4">
 							{[
 								{
-									label: "Registration",
-									desc: "Stays where it is. We don't touch it.",
+									label: "Team operations",
+									desc: "LaneLines focuses here.",
 								},
 								{
-									label: "Billing",
-									desc: "Your billing system remains unchanged.",
+									label: "Communication",
+									desc: "Structured and event-linked.",
 								},
 								{
-									label: "Governing body compliance",
-									desc: "USA Swimming compliance is not our scope.",
+									label: "Attendance",
+									desc: "Visible to coaches and assistants.",
+								},
+								{
+									label: "Volunteer coordination",
+									desc: "Coverage tracked in real time.",
+								},
+								{
+									label: "Team billing",
+									desc: "Supported when you're ready.",
 								},
 							].map((item) => (
 								<div
@@ -328,30 +350,31 @@ export default function Home() {
 									<p className="mt-1 text-sm text-[#2F3A45]/60">{item.desc}</p>
 								</div>
 							))}
+							<p className="text-sm text-[#2F3A45]/60">Adoption stays low-friction.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* Built for Competitive Clubs */}
+			{/* Onboarding */}
 			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
 				<div className="mx-auto max-w-2xl text-center">
 					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-						Who it&apos;s for
+						Onboarding
 					</p>
 					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-						Built for competitive clubs.
+						Up and Running in Under 1 Hour
 					</h2>
 					<p className="mt-4 text-base text-[#2F3A45]/60">
-						If you&apos;re running a serious competitive program, this is for you.
+						You don&apos;t migrate everything at once. You start where chaos hurts most.
 					</p>
 				</div>
 				<div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
 					{[
-						"60–150 swimmer year-round programs",
-						"Multi-group practice structures",
-						"Volunteer-dependent meets",
-						"Coaching staffs who need operational clarity",
+						"Step 1: Import your roster",
+						"Step 2: Create your next meet or practice",
+						"Step 3: Post your first structured announcement",
+						"Your team can get started in under 1 hour",
 					].map((item) => (
 						<div
 							key={item}
@@ -364,38 +387,38 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Pricing Preview */}
+			{/* Vision */}
 			<section className="border-y border-[#0F1E2E]/6 bg-white">
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
 					<div className="mx-auto max-w-2xl text-center">
 						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2E6F95]">
-							Pricing
+							Vision
 						</p>
 						<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-[#0F1E2E] md:text-4xl">
-							Simple, flat pricing.
+							Stronger Swimmers Built on Stronger Systems
 						</h2>
 						<p className="mt-4 text-base text-[#2F3A45]/60">
-							One license covers your entire club. No per-swimmer fees. No feature tiers.
+							When operational chaos decreases, coaches spend more time coaching, assistants
+							take ownership confidently, parents know what to do, and meet weeks run smoothly.
 						</p>
 					</div>
 					<div className="mx-auto mt-10 max-w-md rounded-xl border border-[#0F1E2E]/8 bg-[#F5F7F9] p-8 text-center">
 						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2F3A45]/40">
-							Standard Club License
+							LaneLines Mission
 						</p>
-						<p className="mt-3 text-5xl font-bold tracking-tight text-[#0F1E2E]">
-							$1,800
+						<p className="mt-3 text-xl font-bold tracking-tight text-[#0F1E2E]">
+							LaneLines exists to free coaches to do what matters most.
 						</p>
-						<p className="mt-1 text-sm text-[#2F3A45]/50">per club, per year</p>
 						<div className="my-6 border-t border-[#0F1E2E]/8" />
 						<p className="text-sm font-medium text-[#2E6F95]">
-							Founding pilot clubs: 100% discounted through end of season.
+							Structured operations create calmer weeks and better team outcomes.
 						</p>
 						<div className="mt-6">
 							<Link
 								className="inline-block rounded-lg bg-[#0F1E2E] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0F1E2E]/90"
-								to="/pricing"
+								to="/founding-pilot"
 							>
-								View Full Pricing
+								See How It Works
 							</Link>
 						</div>
 					</div>
@@ -406,21 +429,27 @@ export default function Home() {
 			<section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
 				<div className="mx-auto max-w-2xl rounded-2xl border border-[#0F1E2E]/8 bg-[#0F1E2E] p-10 text-center md:p-14">
 					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
-						Founding Pilot
+						Final CTA
 					</p>
 					<h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-white md:text-4xl">
-						Join the founding cohort.
+						Ready to Run Your Next Meet Without Chaos?
 					</h2>
 					<p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-white/60">
-						Full platform access. Guided onboarding. Direct roadmap influence. Limited to a
-						small number of competitive clubs.
+						Schedule a short walkthrough and see exactly how LaneLines brings structure to
+						your next meet week.
 					</p>
-					<div className="mt-8">
+					<div className="mt-8 flex flex-wrap items-center justify-center gap-3">
 						<Link
 							className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#0F1E2E] hover:bg-white/90"
 							to="/founding-pilot"
 						>
-							Apply for Founding Pilot Access
+							Schedule a 15-Minute Walkthrough
+						</Link>
+						<Link
+							className="inline-block rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+							to="/pricing"
+						>
+							Start With One Meet
 						</Link>
 					</div>
 				</div>
