@@ -35,6 +35,12 @@ export default function Support() {
 								support@lanelines.app
 							</a>
 						</p>
+						<div className="mt-4 space-y-2">
+							<p className="font-semibold text-[#0D3C61]">SMS Program (Account Verification / 2FA)</p>
+							<p>
+								LaneLines sends one-time passcodes (OTP) for account verification and login. Message frequency varies and messages are sent only when you request a verification code during sign-in. Message and data rates may apply. For help, reply HELP or contact support@lanelines.app. To opt out, reply STOP.
+							</p>
+						</div>
 						<p className="mt-3 text-[#0D3C61]/60">
 							We typically respond within 1-2 business days.
 						</p>
