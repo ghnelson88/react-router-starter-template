@@ -15,6 +15,7 @@ import {
 	XSquare,
 	CheckSquare,
 } from "lucide-react";
+import { ThemeToggle } from "../components/theme-toggle";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -73,6 +74,7 @@ export default function Home() {
 						</Link>
 					</nav>
 					<div className="flex items-center gap-4">
+						<ThemeToggle />
 						<a
 							className="text-base transition-colors hidden sm:block text-neutral-600 hover:text-neutral-900 dark:text-white dark:hover:text-neutral-300"
 							href="https://app.lanelinesapp.com"

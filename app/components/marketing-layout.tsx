@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
 	{ label: "Pricing", to: "/pricing" },
@@ -55,6 +57,7 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 						))}
 					</nav>
 					<div className="flex items-center gap-4">
+						<ThemeToggle />
 						<a
 							className="text-base transition-colors hidden sm:block text-neutral-600 hover:text-neutral-900 dark:text-white dark:hover:text-neutral-300"
 							href="https://app.lanelinesapp.com"

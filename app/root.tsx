@@ -8,6 +8,7 @@ import {
 	ScrollRestoration,
 	useLoaderData,
 } from "react-router";
+import { ThemeProvider } from "./hooks/use-theme";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -51,6 +52,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 				<script
 					dangerouslySetInnerHTML={{
+						__html: `(function(){var t=localStorage.getItem("theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.classList.add("dark")})()`,
+					}}
+				/>
+				<script
+					dangerouslySetInnerHTML={{
 						__html: `window.__SUPABASE_ENV__ = ${JSON.stringify({
 							url: supabaseUrl,
 							anonKey: supabaseAnonKey,
@@ -92,7 +98,11 @@ export default function App() {
 		window.location.replace(`/auth/reset-password${search}${hash}`);
 	}, []);
 
-	return <Outlet />;
+	return (
+		<ThemeProvider>
+			<Outlet />
+		</ThemeProvider>
+	);
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
