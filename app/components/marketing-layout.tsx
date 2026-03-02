@@ -40,7 +40,7 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 						<img
 							src="/image.png"
 							alt="LaneLines Logo"
-							className="h-8 md:h-10 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
+							className="h-12 md:h-14 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
 						/>
 					</Link>
 					<nav className="hidden md:flex items-center gap-6 text-base">
