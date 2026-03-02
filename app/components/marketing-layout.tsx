@@ -123,7 +123,7 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 								<span className="text-sm font-semibold tracking-[-0.01em]">LaneLines</span>
 							</Link>
 							<p className="mt-4 max-w-xs text-sm leading-relaxed text-[#2F3A45]/60">
-								The system of record for swim meet operations. Built for year-round USA Swimming clubs.
+								The system that connects effort to improvement for swim teams.
 							</p>
 						</div>
 						<div>
