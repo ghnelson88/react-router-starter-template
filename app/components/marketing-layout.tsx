@@ -35,12 +35,12 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 				Skip to content
 			</a>
 			<header className="fixed top-0 inset-x-0 z-50 border-b border-neutral-200 dark:border-white/[0.08] backdrop-blur-md bg-white/80 dark:bg-black/60 transition-colors duration-300">
-				<div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+				<div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 					<Link to="/" className="flex items-center gap-2">
 						<img
 							src="/image.png"
 							alt="LaneLines Logo"
-							className="h-12 md:h-14 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
+							className="h-16 md:h-18 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
 						/>
 					</Link>
 					<nav className="hidden md:flex items-center gap-6 text-base">
@@ -92,7 +92,7 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 					</details>
 				</div>
 			</header>
-			<main id="main-content" className="pt-16">
+			<main id="main-content" className="pt-20">
 				{children}
 			</main>
 			<footer className="border-t border-neutral-200 dark:border-white/[0.08] transition-colors duration-300">
