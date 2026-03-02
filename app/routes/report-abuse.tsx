@@ -45,14 +45,14 @@ export function meta({}: Route.MetaArgs) {
 export default function ReportAbuse() {
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-4xl px-6 py-16">
-				<p className="text-sm uppercase tracking-[0.3em] text-[#0D3C61]/60">Trust & Safety</p>
-				<h1 className="mt-4 text-4xl font-semibold text-[#0D3C61]">How to Report Abuse</h1>
-				<p className="mt-4 text-[#0D3C61]/70">
+			<section className="mx-auto w-full max-w-4xl px-6 py-16 transition-colors duration-300">
+				<p className="text-sm uppercase tracking-[0.3em] text-neutral-500">Trust & Safety</p>
+				<h1 className="mt-4 text-4xl font-semibold text-neutral-900 dark:text-white">How to Report Abuse</h1>
+				<p className="mt-4 text-neutral-500 dark:text-neutral-400">
 					<strong>Effective Date:</strong> February 2026
 				</p>
 
-				<div className="mt-10 space-y-10 text-[#0D3C61]/80">
+				<div className="mt-10 space-y-10 text-neutral-600 dark:text-neutral-400">
 					<p>
 						LaneLines is committed to keeping our platform safe for everyone — especially the
 						young swimmers and families who depend on it. If you see something that doesn't
@@ -60,7 +60,7 @@ export default function ReportAbuse() {
 					</p>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							1. How to Report Within the App
 						</h2>
 						<p className="mt-4">
@@ -84,13 +84,13 @@ export default function ReportAbuse() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">2. What You Can Report</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">2. What You Can Report</h2>
 						<p className="mt-4">
 							You can report any content or behavior that makes the platform feel unsafe or
 							violates our{" "}
 							<a
 								href="/community-guidelines"
-								className="text-[#1E88E5] underline hover:text-[#1565C0]"
+								className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80"
 							>
 								Community Guidelines
 							</a>
@@ -100,19 +100,19 @@ export default function ReportAbuse() {
 							{reportableContent.map((category) => (
 								<div
 									key={category.title}
-									className="rounded-2xl border border-[#0D3C61]/15 bg-white p-5"
+									className="rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-5"
 								>
-									<h3 className="text-lg font-semibold text-[#0D3C61]">
+									<h3 className="text-lg font-semibold text-neutral-900 dark:text-white">
 										{category.title}
 									</h3>
-									<p className="mt-2 text-sm text-[#0D3C61]/75">{category.description}</p>
+									<p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">{category.description}</p>
 								</div>
 							))}
 						</div>
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							3. What Happens After You Report
 						</h2>
 						<p className="mt-4">
@@ -141,7 +141,7 @@ export default function ReportAbuse() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">4. Blocking Users</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">4. Blocking Users</h2>
 						<p className="mt-4">
 							Blocking is separate from reporting. You can do both, or either one:
 						</p>
@@ -159,8 +159,8 @@ export default function ReportAbuse() {
 						</ul>
 					</div>
 
-					<div className="rounded-2xl border border-rose-200 bg-rose-50 p-6">
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+					<div className="rounded-2xl border border-rose-200 bg-rose-50 dark:border-rose-500/20 dark:bg-rose-500/10 p-6">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							5. Emergency Situations
 						</h2>
 						<p className="mt-4">
@@ -185,7 +185,7 @@ export default function ReportAbuse() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							6. Protections for Minors
 						</h2>
 						<p className="mt-4">
@@ -213,7 +213,7 @@ export default function ReportAbuse() {
 							For more on how we protect children's data, see our{" "}
 							<a
 								href="/child-privacy-notice"
-								className="text-[#1E88E5] underline hover:text-[#1565C0]"
+								className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80"
 							>
 								Child Privacy Notice
 							</a>
@@ -221,22 +221,22 @@ export default function ReportAbuse() {
 						</p>
 					</div>
 
-					<div className="rounded-2xl border border-[#0D3C61]/15 bg-white p-6">
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">7. Contact Us</h2>
+					<div className="rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-6">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">7. Contact Us</h2>
 						<p className="mt-4">
 							If you have safety concerns that need human review, or if you're unable to use the
 							in-app reporting tools, contact us directly:
 						</p>
-						<p className="mt-3 font-semibold text-[#0D3C61]">LaneLines Trust & Safety</p>
+						<p className="mt-3 font-semibold text-neutral-900 dark:text-white">LaneLines Trust & Safety</p>
 						<p className="mt-1">
 							<a
 								href="mailto:support@lanelinesapp.com"
-								className="text-[#1E88E5] underline hover:text-[#1565C0]"
+								className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80"
 							>
 								support@lanelinesapp.com
 							</a>
 						</p>
-						<p className="mt-3 text-sm text-[#0D3C61]/60">
+						<p className="mt-3 text-sm text-neutral-500">
 							Please include as much detail as possible so we can investigate effectively.
 						</p>
 					</div>

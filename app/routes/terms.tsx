@@ -15,19 +15,19 @@ export function meta({}: Route.MetaArgs) {
 export default function Terms() {
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-4xl px-6 py-16">
-				<p className="text-sm uppercase tracking-[0.3em] text-[#0D3C61]/60">Legal</p>
-				<h1 className="mt-4 text-4xl font-semibold text-[#0D3C61]">Terms of Use</h1>
-				<div className="mt-5 rounded-2xl border border-[#0D3C61]/15 bg-white p-5 text-sm text-[#0D3C61]/80 sm:flex sm:gap-10">
+			<section className="mx-auto w-full max-w-4xl px-6 py-16 transition-colors duration-300">
+				<p className="text-sm uppercase tracking-[0.3em] text-neutral-500">Legal</p>
+				<h1 className="mt-4 text-4xl font-semibold text-neutral-900 dark:text-white">Terms of Use</h1>
+				<div className="mt-5 rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-5 text-sm text-neutral-600 dark:text-neutral-400 sm:flex sm:gap-10">
 					<p>
-						<strong className="text-[#0D3C61]">Effective Date:</strong> March 2, 2026
+						<strong className="text-neutral-900 dark:text-white">Effective Date:</strong> March 2, 2026
 					</p>
 					<p className="mt-2 sm:mt-0">
-						<strong className="text-[#0D3C61]">Last Updated:</strong> March 2, 2026
+						<strong className="text-neutral-900 dark:text-white">Last Updated:</strong> March 2, 2026
 					</p>
 				</div>
 
-				<div className="mt-10 space-y-10 text-[#0D3C61]/80">
+				<div className="mt-10 space-y-10 text-neutral-600 dark:text-neutral-400">
 					<p>
 						These Terms of Use ("Terms") govern your access to and use of the LaneLines website,
 						mobile applications, and related services (collectively, the "Service").
@@ -41,8 +41,8 @@ export default function Terms() {
 						Terms. If you do not agree, do not use the Service.
 					</p>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">1. Eligibility</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">1. Eligibility</h2>
 						<p className="mt-4">You must be at least 18 years old to create an account.</p>
 						<p className="mt-3">
 							Swimmer accounts (if enabled by a team) must be created and authorized by a parent
@@ -52,8 +52,8 @@ export default function Terms() {
 						<p className="mt-3">Use of LaneLines is void where prohibited by law.</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">2. Description of Service</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">2. Description of Service</h2>
 						<p className="mt-4">
 							LaneLines provides operational tools for competitive youth swim teams, including
 							but not limited to:
@@ -72,8 +72,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">3. Account Responsibility</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">3. Account Responsibility</h2>
 						<p className="mt-4">You are responsible for:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Maintaining the confidentiality of your login credentials</li>
@@ -84,8 +84,8 @@ export default function Terms() {
 						<p className="mt-3">We may suspend or terminate accounts that violate these Terms.</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">4. Acceptable Use</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">4. Acceptable Use</h2>
 						<p className="mt-4">You agree not to:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Use the Service for unlawful purposes</li>
@@ -103,8 +103,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">5. Team-Based Access &amp; Data Visibility</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">5. Team-Based Access &amp; Data Visibility</h2>
 						<p className="mt-4">LaneLines operates on a team-scoped access model.</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Users may only access data for teams where they are active members.</li>
@@ -117,8 +117,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							6. SMS Program (Account Verification / 2FA)
 						</h2>
 						<p className="mt-4">
@@ -141,8 +141,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">7. Billing &amp; Payments</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">7. Billing &amp; Payments</h2>
 						<p className="mt-4">Certain teams may enable billing features.</p>
 						<p className="mt-3">
 							Payments may be processed through third-party providers such as Stripe. LaneLines
@@ -157,8 +157,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">8. Intellectual Property</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">8. Intellectual Property</h2>
 						<p className="mt-4">
 							All content, trademarks, logos, software, and materials provided through LaneLines
 							are owned by or licensed to LaneLines.
@@ -173,17 +173,17 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">9. Privacy</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">9. Privacy</h2>
 						<p className="mt-4">Your use of LaneLines is subject to our:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>
-								<Link className="text-sky-500 hover:text-sky-600" to="/privacy">
+								<Link className="text-[#007BA7] hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80" to="/privacy">
 									Privacy Policy
 								</Link>
 							</li>
 							<li>
-							<Link className="text-sky-500 hover:text-sky-600" to="/child-privacy-notice">
+							<Link className="text-[#007BA7] hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80" to="/child-privacy-notice">
 								Child Privacy Policy
 							</Link>
 							</li>
@@ -193,8 +193,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">10. Disclaimers</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">10. Disclaimers</h2>
 						<p className="mt-4">The Service is provided "as is" and "as available."</p>
 						<p className="mt-3">We do not guarantee:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
@@ -208,8 +208,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">11. Limitation of Liability</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">11. Limitation of Liability</h2>
 						<p className="mt-4">To the maximum extent permitted by law, LaneLines shall not be liable for:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Indirect, incidental, or consequential damages</li>
@@ -223,8 +223,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">12. Termination</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">12. Termination</h2>
 						<p className="mt-4">We may suspend or terminate access if:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>You violate these Terms</li>
@@ -234,8 +234,8 @@ export default function Terms() {
 						<p className="mt-3">Upon termination, your right to use the Service ends immediately.</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">13. Modifications to Terms</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">13. Modifications to Terms</h2>
 						<p className="mt-4">We may update these Terms from time to time.</p>
 						<p className="mt-3">
 							If we make material changes, we will update the "Last Updated" date. Continued use
@@ -243,16 +243,16 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">14. Governing Law</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">14. Governing Law</h2>
 						<p className="mt-4">
 							These Terms are governed by the laws of the State of [Your State], without regard
 							to conflict-of-law principles.
 						</p>
 					</div>
 
-					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">15. Contact Information</h2>
+					<div className="transition-colors duration-300">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">15. Contact Information</h2>
 						<p className="mt-4">For questions about these Terms:</p>
 						<p className="mt-3">
 							<strong>Email:</strong> support@lanelinesapp.com
@@ -262,8 +262,8 @@ export default function Terms() {
 						</p>
 					</div>
 
-					<div className="rounded-2xl border border-[#0D3C61]/15 bg-white p-6">
-						<p className="text-[#0D3C61]">
+					<div className="transition-colors duration-300 rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-6">
+						<p className="text-neutral-900 dark:text-white">
 							By using LaneLines, you acknowledge that you have read and agree to these Terms of
 							Use.
 						</p>

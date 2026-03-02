@@ -132,33 +132,33 @@ export default function Contact() {
 
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-6xl px-6 py-12 md:py-16">
-				<div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
+			<section className="mx-auto w-full max-w-6xl px-6 py-12 md:py-16 transition-colors duration-300">
+				<div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start transition-colors duration-300">
 					<div>
-						<h1 className="text-4xl font-semibold text-[#0D3C61] md:text-5xl">Contact us</h1>
-						<p className="mt-4 text-lg text-[#0D3C61]/85">
+						<h1 className="text-4xl font-semibold text-neutral-900 dark:text-white md:text-5xl">Contact us</h1>
+						<p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
 							Tell us about your team goals, season rhythm, and meet schedule. We&apos;ll follow
 							up within one business day.
 						</p>
 						<div className="mt-8 grid gap-3 sm:grid-cols-2">
 							<a
-								className="rounded-2xl border border-[#0D3C61]/20 bg-white px-5 py-4 text-base font-medium text-[#0D3C61] hover:border-[#1E88E5]/50"
+								className="rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-5 py-4 text-base font-medium text-neutral-900 dark:text-white hover:border-[#007BA7]/30 dark:hover:border-[#007BA7]/40 shadow-sm dark:shadow-none transition-colors duration-300"
 								href="mailto:hello@lanelinesapp.com"
 							>
 								Email us directly
-								<p className="mt-1 text-sm font-normal text-[#0D3C61]/70">hello@lanelinesapp.com</p>
+								<p className="mt-1 text-sm font-normal text-neutral-500 dark:text-neutral-400">hello@lanelinesapp.com</p>
 							</a>
 							<a
-								className="rounded-2xl border border-[#0D3C61]/20 bg-white px-5 py-4 text-base font-medium text-[#0D3C61] hover:border-[#1E88E5]/50"
+								className="rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-5 py-4 text-base font-medium text-neutral-900 dark:text-white hover:border-[#007BA7]/30 dark:hover:border-[#007BA7]/40 shadow-sm dark:shadow-none transition-colors duration-300"
 								href="/pricing"
 							>
 								See plans first
-								<p className="mt-1 text-sm font-normal text-[#0D3C61]/70">Compare options in under a minute</p>
+								<p className="mt-1 text-sm font-normal text-neutral-500 dark:text-neutral-400">Compare options in under a minute</p>
 							</a>
 						</div>
 					</div>
-					<Form className="rounded-3xl border border-[#0D3C61]/15 bg-white p-8 text-sm text-[#0D3C61]/85 shadow-sm" method="post">
-						<p className="mb-5 text-sm text-[#0D3C61]/70">Complete this short form and we&apos;ll reach out quickly.</p>
+					<Form className="rounded-3xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-8 text-sm text-neutral-600 dark:text-neutral-400 shadow-sm dark:shadow-none transition-colors duration-300" method="post">
+						<p className="mb-5 text-sm text-neutral-500 dark:text-neutral-400">Complete this short form and we&apos;ll reach out quickly.</p>
 						<input
 							aria-hidden="true"
 							autoComplete="off"
@@ -168,9 +168,9 @@ export default function Contact() {
 							type="text"
 						/>
 						<label className="block">
-							<span className="text-[#0D3C61]">Name</span>
+							<span className="text-neutral-900 dark:text-white">Name</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
+								className="mt-2 w-full rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-4 py-3 text-base text-neutral-900 dark:text-white dark:bg-transparent placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
 								name="name"
 								placeholder="Jane Doe"
 								required
@@ -179,9 +179,9 @@ export default function Contact() {
 							/>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-[#0D3C61]">Work email</span>
+							<span className="text-neutral-900 dark:text-white">Work email</span>
 							<input
-								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
+								className="mt-2 w-full rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-4 py-3 text-base text-neutral-900 dark:text-white dark:bg-transparent placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
 								name="workEmail"
 								placeholder="jane@company.com"
 								required
@@ -189,27 +189,27 @@ export default function Contact() {
 							/>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-[#0D3C61]">Team profile</span>
+							<span className="text-neutral-900 dark:text-white">Team profile</span>
 							<select
-								className="mt-2 w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61]"
+								className="mt-2 w-full rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-4 py-3 text-base text-neutral-900 dark:text-white dark:bg-transparent"
 								name="teamProfile"
 								required
 							>
-								<option className="text-[#0D3C61]" value="Small team">
+								<option className="text-neutral-900 dark:text-white" value="Small team">
 									Small team
 								</option>
-								<option className="text-[#0D3C61]" value="Growing program">
+								<option className="text-neutral-900 dark:text-white" value="Growing program">
 									Growing program
 								</option>
-								<option className="text-[#0D3C61]" value="Multi-squad club">
+								<option className="text-neutral-900 dark:text-white" value="Multi-squad club">
 									Multi-squad club
 								</option>
 							</select>
 						</label>
 						<label className="mt-5 block">
-							<span className="text-[#0D3C61]">What are you hoping to solve?</span>
+							<span className="text-neutral-900 dark:text-white">What are you hoping to solve?</span>
 							<textarea
-								className="mt-2 min-h-[120px] w-full rounded-2xl border border-[#0D3C61]/25 bg-white px-4 py-3 text-base text-[#0D3C61] placeholder:text-[#0D3C61]/45"
+								className="mt-2 min-h-[120px] w-full rounded-2xl border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-white/[0.02] px-4 py-3 text-base text-neutral-900 dark:text-white dark:bg-transparent placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
 								name="goals"
 								placeholder="Tell us about attendance, meet management, or parent communication..."
 								required
@@ -217,18 +217,18 @@ export default function Contact() {
 							/>
 						</label>
 						<button
-							className="mt-6 w-full rounded-full bg-[#1E88E5] px-6 py-3.5 text-base font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
+							className="mt-6 w-full rounded-full bg-[#0A4C75] dark:bg-white px-6 py-3.5 text-base font-semibold text-white dark:text-black disabled:cursor-not-allowed disabled:opacity-70 transition-colors duration-300"
 							disabled={isSubmitting}
 							type="submit"
 						>
 							{isSubmitting ? "Submitting..." : "Send message"}
 						</button>
 						{actionData && (
-							<p className={`mt-3 text-sm ${actionData.success ? "text-emerald-300" : "text-rose-300"}`}>
+							<p className={`mt-3 text-sm ${actionData.success ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}>
 								{actionData.message}
 							</p>
 						)}
-						<p className="mt-3 text-xs text-[#0D3C61]/65">
+						<p className="mt-3 text-xs text-neutral-400 dark:text-neutral-500">
 							By submitting, you agree to receive communications from LaneLines.
 						</p>
 					</Form>

@@ -8,7 +8,7 @@
 
 html,
 body {
-	@apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-black;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 
@@ -32,6 +32,6 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-	outline: 2px solid #1E88E5;
+	outline: 2px solid #007BA7;
 	outline-offset: 2px;
 }

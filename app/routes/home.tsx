@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 import {
 	Target,
 	ArrowRight,
@@ -47,31 +48,43 @@ export default function Home() {
 					</a>
 					<nav className="hidden md:flex items-center gap-6 text-base">
 						<a
-							href="#problem"
-							className="transition-colors text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
-						>
-							The Problem
-						</a>
-						<a
 							href="#features"
 							className="transition-colors text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
 						>
 							Features
 						</a>
-						<a
-							href="#alignment"
+						<Link
+							to="/pricing"
 							className="transition-colors text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
 						>
-							Alignment
-						</a>
+							Pricing
+						</Link>
+						<Link
+							to="/about"
+							className="transition-colors text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
+						>
+							About
+						</Link>
+						<Link
+							to="/contact"
+							className="transition-colors text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
+						>
+							Contact
+						</Link>
 					</nav>
 					<div className="flex items-center gap-4">
-						<button className="text-base transition-colors hidden sm:block text-neutral-600 hover:text-neutral-900 dark:text-white dark:hover:text-neutral-300">
+						<a
+							className="text-base transition-colors hidden sm:block text-neutral-600 hover:text-neutral-900 dark:text-white dark:hover:text-neutral-300"
+							href="https://app.lanelinesapp.com"
+						>
 							Log in
-						</button>
-						<button className="text-base px-5 py-2 rounded-full transition-colors bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200 shadow-sm">
+						</a>
+						<Link
+							to="/contact"
+							className="text-base px-5 py-2 rounded-full transition-colors bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200 shadow-sm"
+						>
 							Get Started
-						</button>
+						</Link>
 					</div>
 				</div>
 			</header>
@@ -97,13 +110,19 @@ export default function Home() {
 					</p>
 
 					<div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-						<button className="w-full sm:w-auto text-base px-6 py-3 rounded-full transition-colors flex items-center justify-center gap-2 bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200 shadow-sm">
+						<Link
+							to="/contact"
+							className="w-full sm:w-auto text-base px-6 py-3 rounded-full transition-colors flex items-center justify-center gap-2 bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200 shadow-sm"
+						>
 							Build your team
 							<ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-						</button>
-						<button className="w-full sm:w-auto bg-neutral-50 border border-neutral-200 text-neutral-700 hover:bg-neutral-100 dark:bg-white/[0.05] dark:border-white/[0.08] dark:text-white dark:hover:bg-white/[0.1] text-base px-6 py-3 rounded-full transition-colors">
+						</Link>
+						<Link
+							to="/pricing"
+							className="w-full sm:w-auto bg-neutral-50 border border-neutral-200 text-neutral-700 hover:bg-neutral-100 dark:bg-white/[0.05] dark:border-white/[0.08] dark:text-white dark:hover:bg-white/[0.1] text-base px-6 py-3 rounded-full transition-colors"
+						>
 							See how it works
-						</button>
+						</Link>
 					</div>
 				</section>
 
@@ -433,31 +452,44 @@ export default function Home() {
 						Coaches coach. Parents understand. Swimmers improve. Get the blueprint for a team that gets
 						better on purpose.
 					</p>
-					<button className="text-base px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-[#007BA7]/20 dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200">
+					<Link
+						to="/contact"
+						className="inline-block text-base px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-[#007BA7]/20 dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] bg-[#0A4C75] text-white hover:bg-[#0A4C75]/90 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
+					>
 						Start Building Alignment
-					</button>
+					</Link>
 				</section>
 			</main>
 
 			<footer className="border-t border-neutral-200 dark:border-white/[0.08] mt-auto transition-colors duration-300">
-				<div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
-					<div className="flex items-center gap-2 text-neutral-400 dark:text-white/50">
-						<img
-							src="/image.png"
-							alt="LaneLines Logo"
-							className="h-6 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%] opacity-70"
-						/>
+				<div className="max-w-7xl mx-auto px-6 py-10 flex flex-col gap-8">
+					<div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+						<div>
+							<Link to="/" className="flex items-center gap-2">
+								<img
+									src="/image.png"
+									alt="LaneLines Logo"
+									className="h-6 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%] opacity-70"
+								/>
+							</Link>
+							<p className="mt-3 max-w-md text-sm text-neutral-500">
+								The swim team platform that keeps athletes, coaches, and families in sync.
+							</p>
+						</div>
+						<div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+							<Link to="/pricing" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Pricing</Link>
+							<Link to="/about" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">About</Link>
+							<Link to="/contact" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Contact</Link>
+							<Link to="/support" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Support</Link>
+							<Link to="/privacy" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Privacy</Link>
+							<Link to="/terms" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Terms</Link>
+							<Link to="/community-guidelines" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Guidelines</Link>
+							<Link to="/child-privacy-notice" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Child Privacy</Link>
+							<Link to="/report-abuse" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Report Abuse</Link>
+						</div>
 					</div>
-					<p className="text-sm text-neutral-500 dark:text-neutral-600">
-						&copy; 2024 LaneLines. The alignment layer for swim teams.
-					</p>
-					<div className="flex items-center gap-5 text-sm text-neutral-400 dark:text-neutral-500">
-						<a href="#" className="transition-colors hover:text-neutral-600 dark:hover:text-neutral-300">
-							Privacy
-						</a>
-						<a href="#" className="transition-colors hover:text-neutral-600 dark:hover:text-neutral-300">
-							Terms
-						</a>
+					<div className="border-t border-neutral-200 dark:border-white/[0.08] pt-4 text-center text-xs text-neutral-400 dark:text-neutral-600">
+						&copy; 2026 G&amp;J Family Ventures LLC. All rights reserved.
 					</div>
 				</div>
 			</footer>

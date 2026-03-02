@@ -57,14 +57,14 @@ export function meta({}: Route.MetaArgs) {
 export default function CommunityGuidelines() {
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-4xl px-6 py-16">
-				<p className="text-sm uppercase tracking-[0.3em] text-[#0D3C61]/60">Trust & Safety</p>
-				<h1 className="mt-4 text-4xl font-semibold text-[#0D3C61]">LaneLines Community Guidelines</h1>
-				<p className="mt-4 text-[#0D3C61]/70">
+			<section className="mx-auto w-full max-w-4xl px-6 py-16 transition-colors duration-300">
+				<p className="text-sm uppercase tracking-[0.3em] text-neutral-500">Trust & Safety</p>
+				<h1 className="mt-4 text-4xl font-semibold text-neutral-900 dark:text-white">LaneLines Community Guidelines</h1>
+				<p className="mt-4 text-neutral-500 dark:text-neutral-400">
 					<strong>Effective Date:</strong> February 8, 2026
 				</p>
 
-				<div className="mt-10 space-y-10 text-[#0D3C61]/80">
+				<div className="mt-10 space-y-10 text-neutral-600 dark:text-neutral-400">
 					<p>
 						LaneLines is a team management and communication platform designed to support youth
 						swim teams, their coaches, guardians, and swimmers. Our goal is to provide a safe,
@@ -74,7 +74,7 @@ export default function CommunityGuidelines() {
 					<p>These Community Guidelines apply to all users of LaneLines.</p>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">1. Our Community Values</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">1. Our Community Values</h2>
 						<p className="mt-4">LaneLines exists to support:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Clear communication</li>
@@ -89,7 +89,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">2. Who Uses LaneLines</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">2. Who Uses LaneLines</h2>
 						<p className="mt-4">LaneLines may be used by:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Coaches and team administrators</li>
@@ -105,7 +105,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">3. Allowed Content</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">3. Allowed Content</h2>
 						<p className="mt-4">You may use LaneLines to:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Communicate about practices, meets, and team events</li>
@@ -121,7 +121,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							4. Prohibited Content (Strictly Enforced)
 						</h2>
 						<p className="mt-4">The following are not allowed on LaneLines:</p>
@@ -129,10 +129,10 @@ export default function CommunityGuidelines() {
 							{prohibitedContent.map((category) => (
 								<div
 									key={category.title}
-									className="rounded-2xl border border-[#0D3C61]/15 bg-white p-5"
+									className="rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-5"
 								>
-									<h3 className="text-lg font-semibold text-[#0D3C61]">{category.title}</h3>
-									<ul className="mt-3 list-disc space-y-1 pl-6 text-sm text-[#0D3C61]/75">
+									<h3 className="text-lg font-semibold text-neutral-900 dark:text-white">{category.title}</h3>
+									<ul className="mt-3 list-disc space-y-1 pl-6 text-sm text-neutral-500 dark:text-neutral-400">
 										{category.items.map((item) => (
 											<li key={item}>{item}</li>
 										))}
@@ -147,7 +147,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							5. Youth Safety & Messaging Protections
 						</h2>
 						<p className="mt-4">LaneLines is designed with youth safety by default:</p>
@@ -164,7 +164,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">6. Reporting Content or Users</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">6. Reporting Content or Users</h2>
 						<p className="mt-4">
 							If you see content or behavior that violates these guidelines:
 						</p>
@@ -172,7 +172,7 @@ export default function CommunityGuidelines() {
 							<li>Use the Report option within the app, or</li>
 							<li>
 								Contact LaneLines support at:{" "}
-								<a className="text-sky-300 underline hover:text-sky-200" href="mailto:support@lanelinesapp.com">
+								<a className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80" href="mailto:support@lanelinesapp.com">
 									support@lanelinesapp.com
 								</a>
 							</li>
@@ -184,7 +184,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">7. Moderation & Enforcement</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">7. Moderation & Enforcement</h2>
 						<p className="mt-4">LaneLines actively moderates reported content.</p>
 						<p className="mt-3">Actions may include:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
@@ -202,7 +202,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">8. User Responsibility</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">8. User Responsibility</h2>
 						<p className="mt-4">By using LaneLines, you agree to:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Communicate respectfully</li>
@@ -214,7 +214,7 @@ export default function CommunityGuidelines() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">9. Changes to These Guidelines</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">9. Changes to These Guidelines</h2>
 						<p className="mt-4">
 							We may update these Community Guidelines as LaneLines evolves.
 						</p>
@@ -224,13 +224,12 @@ export default function CommunityGuidelines() {
 						</p>
 					</div>
 
-					<div className="rounded-2xl border border-[#0D3C61]/15 bg-white p-6">
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">10. Contact Us</h2>
+					<div className="rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-6">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">10. Contact Us</h2>
 						<p className="mt-4">Questions or concerns about these guidelines can be directed to:</p>
-						<p className="mt-3 font-semibold text-[#0D3C61]">LaneLines Support</p>
+						<p className="mt-3 font-semibold text-neutral-900 dark:text-white">LaneLines Support</p>
 						<p className="mt-1">
-							📧 {" "}
-							<a className="text-sky-300 underline hover:text-sky-200" href="mailto:support@lanelinesapp.com">
+							<a className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80" href="mailto:support@lanelinesapp.com">
 								support@lanelinesapp.com
 							</a>
 						</p>
