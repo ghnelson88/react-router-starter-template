@@ -1,119 +1,65 @@
 import { Link } from "react-router";
+import { BrandLogo } from "./brand-logo";
 
 const navLinks = [
+	{ label: "The Problem", to: "/#problem" },
+	{ label: "Features", to: "/#features" },
+	{ label: "Alignment", to: "/#alignment" },
 	{ label: "Pricing", to: "/pricing" },
 	{ label: "About", to: "/about" },
 	{ label: "Contact", to: "/contact" },
-	{ label: "Guidelines", to: "/community-guidelines" },
 ];
 
 export function MarketingLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="min-h-screen bg-[#F5F5F5] text-[#0D3C61]">
+		<div className="min-h-screen bg-white text-neutral-600">
 			<a
-				className="sr-only left-4 top-4 z-50 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#0D3C61] focus:not-sr-only focus:fixed"
+				className="sr-only left-4 top-4 z-50 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#0A4C75] focus:not-sr-only focus:fixed"
 				href="#main-content"
 			>
 				Skip to content
 			</a>
-			<header className="border-b border-[#0D3C61]/15 bg-white/95 backdrop-blur">
-				<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-4 md:gap-6 md:py-5">
-					<Link className="flex items-center gap-3 text-lg font-semibold tracking-wide text-[#0D3C61]" to="/">
-						<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#1E88E5] text-sm font-bold text-white">
-							LL
-						</span>
-						LaneLines
-					</Link>
-					<nav className="hidden items-center gap-6 text-sm text-[#0D3C61]/80 md:flex">
+			<header className="sticky top-0 inset-x-0 z-50 border-b border-neutral-200 backdrop-blur-md bg-white/85">
+				<div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-4">
+					<BrandLogo compact />
+					<nav className="hidden items-center gap-6 text-sm md:flex">
 						{navLinks.map((link) => (
-							<Link
-								key={link.to}
-								className="transition hover:text-[#1E88E5]"
-								to={link.to}
-							>
+							<Link key={link.to} className="text-neutral-500 hover:text-neutral-900" to={link.to}>
 								{link.label}
 							</Link>
 						))}
 					</nav>
 					<div className="hidden items-center gap-3 text-sm md:flex">
-						<a
-							className="rounded-full border border-[#0D3C61]/30 px-4 py-2.5 text-[#0D3C61] transition hover:border-[#0D3C61]/55"
-							href="https://app.lanelinesapp.com"
-						>
-							Open App
+						<a className="rounded-full px-4 py-2.5 text-neutral-700 hover:text-neutral-900" href="/contact">
+							Log in
 						</a>
 						<Link
-							className="rounded-full bg-[#1E88E5] px-4 py-2.5 font-semibold text-white transition hover:bg-[#1565C0]"
+							className="rounded-full bg-[#0A4C75] px-5 py-2.5 font-medium text-white hover:bg-[#0A4C75]/90"
 							to="/contact"
 						>
-							Contact Sales
+							Get Started
 						</Link>
 					</div>
-					<details className="relative md:hidden">
-						<summary className="list-none rounded-xl border border-[#0D3C61]/25 px-3 py-2 text-sm text-[#0D3C61]">
-							Menu
-						</summary>
-						<div className="absolute right-0 top-12 w-52 space-y-2 rounded-2xl border border-[#0D3C61]/15 bg-white p-3 shadow-xl">
-							{navLinks.map((link) => (
-								<Link
-									key={link.to}
-									className="block rounded-lg px-3 py-2 text-sm text-[#0D3C61] hover:bg-[#1E88E5]/10"
-									to={link.to}
-								>
-									{link.label}
-								</Link>
-							))}
-							<Link
-								className="mt-1 block rounded-lg bg-[#1E88E5] px-3 py-2 text-sm font-semibold text-white"
-								to="/contact"
-							>
-								Contact Sales
-							</Link>
-						</div>
-					</details>
 				</div>
 			</header>
-			<main id="main-content">{children}</main>
-			<footer className="border-t border-[#0D3C61]/15 bg-white">
-				<div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-[#0D3C61]/75 md:flex-row md:items-center md:justify-between">
-					<div>
-						<p className="text-[#0D3C61]">LaneLines</p>
-						<p className="mt-2 max-w-md">
-							The swim team platform that keeps athletes, coaches, and families in sync.
-						</p>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<Link className="hover:text-[#1E88E5]" to="/pricing">
-							Pricing
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/about">
-							About
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/contact">
-							Contact
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/privacy">
+			<main className="pb-24" id="main-content">
+				{children}
+			</main>
+			<footer className="border-t border-neutral-200">
+				<div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 text-sm text-neutral-500 md:flex-row">
+					<BrandLogo className="opacity-80" compact />
+					<p>© 2026 LaneLines. The alignment layer for swim teams.</p>
+					<div className="flex flex-wrap items-center gap-5">
+						<Link className="hover:text-neutral-700" to="/privacy">
 							Privacy
 						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/terms">
+						<Link className="hover:text-neutral-700" to="/terms">
 							Terms
 						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/community-guidelines">
-							Community Guidelines
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/child-privacy-notice">
-							Child Privacy
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/report-abuse">
-							Report Abuse
-						</Link>
-						<Link className="hover:text-[#1E88E5]" to="/support">
+						<Link className="hover:text-neutral-700" to="/support">
 							Support
 						</Link>
 					</div>
-				</div>
-				<div className="border-t border-[#0D3C61]/10 py-4 text-center text-xs text-[#0D3C61]/50">
-					© 2026 G&J Family Ventures LLC. All rights reserved.
 				</div>
 			</footer>
 		</div>
