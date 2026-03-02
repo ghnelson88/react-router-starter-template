@@ -6,6 +6,7 @@ export default [
 	route("about", "routes/about.tsx"),
 	route("contact", "routes/contact.tsx"),
 	route("privacy", "routes/privacy.tsx"),
+	route("terms", "routes/terms.tsx"),
 	route("community-guidelines", "routes/community-guidelines.tsx"),
 	route("child-privacy-notice", "routes/child-privacy-notice.tsx"),
 	route("report-abuse", "routes/report-abuse.tsx"),
