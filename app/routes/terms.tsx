@@ -129,7 +129,7 @@ export default function Terms() {
 							<li>Messages are sent only when you request a verification code.</li>
 							<li>Message and data rates may apply.</li>
 							<li>
-								To request help, reply <strong>HELP</strong> or contact support@lanelines.app.
+								To request help, reply <strong>HELP</strong> or contact support@lanelinesapp.com.
 							</li>
 							<li>
 								To opt out, reply <strong>STOP</strong>.
@@ -183,9 +183,9 @@ export default function Terms() {
 								</Link>
 							</li>
 							<li>
-								<Link className="text-sky-500 hover:text-sky-600" to="/child-privacy">
-									Child Privacy Policy
-								</Link>
+							<Link className="text-sky-500 hover:text-sky-600" to="/child-privacy-notice">
+								Child Privacy Policy
+							</Link>
 							</li>
 						</ul>
 						<p className="mt-3">
@@ -255,7 +255,7 @@ export default function Terms() {
 						<h2 className="text-2xl font-semibold text-[#0D3C61]">15. Contact Information</h2>
 						<p className="mt-4">For questions about these Terms:</p>
 						<p className="mt-3">
-							<strong>Email:</strong> support@lanelines.app
+							<strong>Email:</strong> support@lanelinesapp.com
 						</p>
 						<p className="mt-2">
 							<strong>Operator:</strong> G&amp;J Family Ventures
