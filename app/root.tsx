@@ -8,14 +8,14 @@ import {
 	ScrollRestoration,
 	useLoaderData,
 } from "react-router";
+import { ThemeProvider } from "./hooks/use-theme";
 
 import type { Route } from "./+types/root";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
-	{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-	{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-	{ rel: "apple-touch-icon", href: "/favicon.svg" },
+	{ rel: "icon", type: "image/png", href: "/image.png" },
+	{ rel: "apple-touch-icon", href: "/image.png" },
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{
 		rel: "preconnect",
@@ -49,6 +49,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
 				<Links />
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function(){var t=localStorage.getItem("theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.classList.add("dark")})()`,
+					}}
+				/>
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `window.__SUPABASE_ENV__ = ${JSON.stringify({
@@ -92,7 +97,11 @@ export default function App() {
 		window.location.replace(`/auth/reset-password${search}${hash}`);
 	}, []);
 
-	return <Outlet />;
+	return (
+		<ThemeProvider>
+			<Outlet />
+		</ThemeProvider>
+	);
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

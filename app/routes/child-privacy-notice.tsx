@@ -15,14 +15,14 @@ export function meta({}: Route.MetaArgs) {
 export default function ChildPrivacyNotice() {
 	return (
 		<MarketingLayout>
-			<section className="mx-auto w-full max-w-4xl px-6 py-16">
-				<p className="text-sm uppercase tracking-[0.3em] text-[#0D3C61]/60">Legal</p>
-				<h1 className="mt-4 text-4xl font-semibold text-[#0D3C61]">Child Privacy Notice</h1>
-				<p className="mt-4 text-[#0D3C61]/70">
+			<section className="mx-auto w-full max-w-4xl px-6 py-16 transition-colors duration-300">
+				<p className="text-sm uppercase tracking-[0.3em] text-neutral-500">Legal</p>
+				<h1 className="mt-4 text-4xl font-semibold text-neutral-900 dark:text-white">Child Privacy Notice</h1>
+				<p className="mt-4 text-neutral-500 dark:text-neutral-400">
 					<strong>Effective Date:</strong> February 2026
 				</p>
 
-				<div className="mt-10 space-y-10 text-[#0D3C61]/80">
+				<div className="mt-10 space-y-10 text-neutral-600 dark:text-neutral-400">
 					<p>
 						LaneLines is a team management platform built for youth swim teams. Because many of our
 						swimmers are under 13, protecting children's privacy is central to how we operate. This
@@ -33,7 +33,7 @@ export default function ChildPrivacyNotice() {
 						This notice supplements our{" "}
 						<a
 							href="/privacy"
-							className="text-[#1E88E5] underline hover:text-[#1565C0]"
+							className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80"
 						>
 							Privacy Policy
 						</a>{" "}
@@ -41,7 +41,7 @@ export default function ChildPrivacyNotice() {
 					</p>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							1. What Information We Collect About Children
 						</h2>
 						<p className="mt-4">
@@ -78,7 +78,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							2. How We Use Children's Information
 						</h2>
 						<p className="mt-4">
@@ -107,7 +107,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							3. Who Can See Your Child's Information
 						</h2>
 						<p className="mt-4">
@@ -132,7 +132,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">4. Parental Consent</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">4. Parental Consent</h2>
 						<p className="mt-4">
 							We require verifiable parental or guardian consent before storing any personal
 							information about a child under 13. Here's how that works:
@@ -162,7 +162,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							5. Data Retention and Deletion
 						</h2>
 						<p className="mt-4">
@@ -170,7 +170,7 @@ export default function ChildPrivacyNotice() {
 							management services. When data is no longer needed, here's what happens:
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
+						<h3 className="mt-6 text-lg font-semibold text-neutral-900 dark:text-white">
 							When Consent Is Revoked
 						</h3>
 						<p className="mt-2">
@@ -180,7 +180,7 @@ export default function ChildPrivacyNotice() {
 							team data.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
+						<h3 className="mt-6 text-lg font-semibold text-neutral-900 dark:text-white">
 							When an Account Is Deleted
 						</h3>
 						<p className="mt-2">
@@ -189,7 +189,7 @@ export default function ChildPrivacyNotice() {
 							individual.
 						</p>
 
-						<h3 className="mt-6 text-lg font-semibold text-[#0D3C61]">
+						<h3 className="mt-6 text-lg font-semibold text-neutral-900 dark:text-white">
 							Retention Period
 						</h3>
 						<p className="mt-2">
@@ -199,7 +199,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">
 							6. Messaging and Safety Protections
 						</h2>
 						<p className="mt-4">
@@ -219,7 +219,7 @@ export default function ChildPrivacyNotice() {
 					</div>
 
 					<div>
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">7. Your Rights as a Parent</h2>
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">7. Your Rights as a Parent</h2>
 						<p className="mt-4">As a parent or guardian, you have the right to:</p>
 						<ul className="mt-3 list-disc space-y-1 pl-6">
 							<li>Review the personal information we have collected about your child</li>
@@ -236,22 +236,22 @@ export default function ChildPrivacyNotice() {
 						</p>
 					</div>
 
-					<div className="rounded-2xl border border-[#0D3C61]/15 bg-white p-6">
-						<h2 className="text-2xl font-semibold text-[#0D3C61]">8. Contact Us</h2>
+					<div className="rounded-2xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.02] p-6">
+						<h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">8. Contact Us</h2>
 						<p className="mt-4">
 							If you have questions about this Child Privacy Notice, want to review your child's
 							data, or need to revoke consent, please contact us:
 						</p>
-						<p className="mt-3 font-semibold text-[#0D3C61]">LaneLines Privacy Team</p>
+						<p className="mt-3 font-semibold text-neutral-900 dark:text-white">LaneLines Privacy Team</p>
 						<p className="mt-1">
 							<a
 								href="mailto:support@lanelinesapp.com"
-								className="text-[#1E88E5] underline hover:text-[#1565C0]"
+								className="text-[#007BA7] underline hover:text-[#0A4C75] dark:hover:text-[#007BA7]/80"
 							>
 								support@lanelinesapp.com
 							</a>
 						</p>
-						<p className="mt-3 text-sm text-[#0D3C61]/60">
+						<p className="mt-3 text-sm text-neutral-500">
 							We aim to respond to all privacy requests within 30 days.
 						</p>
 					</div>

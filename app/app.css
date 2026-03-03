@@ -1,5 +1,7 @@
 @import "tailwindcss" source(".");
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 	--font-sans:
 		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
@@ -8,11 +10,11 @@
 
 html,
 body {
-	@apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-black;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 
-	@media (prefers-color-scheme: dark) {
+	&.dark {
 		color-scheme: dark;
 	}
 }
@@ -32,6 +34,6 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-	outline: 2px solid #1E88E5;
+	outline: 2px solid #007BA7;
 	outline-offset: 2px;
 }
