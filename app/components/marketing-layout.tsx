@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import { ThemeToggle } from "./theme-toggle";
-import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
 	{ label: "Pricing", to: "/pricing" },
