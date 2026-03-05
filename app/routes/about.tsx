@@ -93,8 +93,8 @@ export default function About() {
 						</h3>
 						<div className="space-y-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
 							<p>
-								Jean grew up in Petaluma and has been part of the swimming
-								community since joining her first team at eight years old. She
+								Jean has been part of the swimming community since joining her
+								first team at eight years old. She
 								later returned to the pool deck as a coach, experiencing
 								firsthand the daily realities of running a competitive swim
 								program.
