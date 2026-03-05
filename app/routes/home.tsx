@@ -471,7 +471,7 @@ export default function Home() {
 								<img
 									src="/image.png"
 									alt="LaneLines Logo"
-									className="h-14 md:h-16 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
+									className="h-20 md:h-24 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
 								/>
 							</Link>
 							<p className="max-w-xs text-sm text-neutral-500">
