@@ -112,7 +112,7 @@ export function MarketingLayout({ children }: { children: React.ReactNode }) {
 								The swim team platform that keeps athletes, coaches, and families in sync.
 							</p>
 						</div>
-						<div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+						<div className="flex flex-col gap-2 text-sm md:text-right">
 							{footerLinks.map((link) => (
 								<Link
 									key={link.to}

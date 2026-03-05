@@ -478,7 +478,7 @@ export default function Home() {
 								The swim team platform that keeps athletes, coaches, and families in sync.
 							</p>
 						</div>
-						<div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+						<div className="flex flex-col gap-2 text-sm md:text-right">
 							<Link to="/pricing" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Pricing</Link>
 							<Link to="/about" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">About</Link>
 							<Link to="/contact" className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Contact</Link>
