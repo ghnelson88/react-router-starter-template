@@ -466,15 +466,15 @@ export default function Home() {
 			<footer className="border-t border-neutral-200 dark:border-white/[0.08] mt-auto transition-colors duration-300">
 				<div className="max-w-7xl mx-auto px-6 py-10 flex flex-col gap-8">
 					<div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-						<div>
-							<Link to="/" className="flex items-center gap-2">
+						<div className="flex items-center gap-4">
+							<Link to="/" className="shrink-0">
 								<img
 									src="/image.png"
 									alt="LaneLines Logo"
-									className="h-6 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%] opacity-70"
+									className="h-14 md:h-16 w-auto object-contain dark:brightness-200 dark:contrast-125 dark:grayscale-[50%]"
 								/>
 							</Link>
-							<p className="mt-3 max-w-md text-sm text-neutral-500">
+							<p className="max-w-xs text-sm text-neutral-500">
 								The swim team platform that keeps athletes, coaches, and families in sync.
 							</p>
 						</div>
